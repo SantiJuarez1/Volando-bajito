@@ -20,3 +20,7 @@ https://www.buenosaires.tur.ar
 https://www.buenas-vibras.com.ar
 
 Estas plataformas nos sirvieron para poder organizar nuestro sitio, la interaccion con el usuario y como vender el producto
+
+Trello:
+
+         https://trello.com/b/WEqvjt6M/volando-bajito
