@@ -23,4 +23,4 @@ Estas plataformas nos sirvieron para poder organizar nuestro sitio, la interacci
 
 Trello:
 
-         https://trello.com/b/WEqvjt6M/volando-bajito
+https://trello.com/b/WEqvjt6M/volando-bajito
