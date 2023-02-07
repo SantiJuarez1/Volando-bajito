@@ -28,12 +28,12 @@ hacer menos: no avisar al equipo si necesitamos ayuda para terminar de realizar 
 
 Retro 4 
 
-Seguir haciendo: 
+Seguir haciendo: cumplir con los objetivos del proyecto , seguir organizando tareas con tablero de trello
 
-empezar a hacer: 
+empezar a hacer: más reuniones de equipo 
 
-Dejar de hacer: 
+Dejar de hacer: no comunicarse
 
-hacer mas: 
+hacer mas: Reunion weekly, puestas en comun para realizar cambios y mejorar la experiencia del usuario
 
-hacer menos: 
+hacer menos: cargas manuales de git y en su lugar usar comandos 
