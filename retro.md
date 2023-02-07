@@ -23,3 +23,17 @@ Dejar de hacer: no comunicarse
 hacer mas: organizar tareas con tablero de trello 
 
 hacer menos: no avisar al equipo si necesitamos ayuda para terminar de realizar las tareas del sprint
+
+<--------------------------------------------------------------------------------------------------->
+
+Retro 4 
+
+Seguir haciendo: 
+
+empezar a hacer: 
+
+Dejar de hacer: 
+
+hacer mas: 
+
+hacer menos: 
