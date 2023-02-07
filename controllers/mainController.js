@@ -1,5 +1,7 @@
+const { validationResult } = require('express-validator');
+const path = require('path');
 const fs = require('fs');
-const path = require('path'); 
+
 
 const destinoFile = fs.readFileSync(path.join(__dirname, '../models/destino.json'), 'utf-8');
 const listDestinos = JSON.parse(destinoFile);
@@ -11,27 +13,45 @@ const hotelesFile = fs.readFileSync(path.join(__dirname, '../models/hoteles.json
 const listHoteles = JSON.parse(hotelesFile);
 
 const controller = {
-    index: (req, res) => {
-       res.render('index', { listDestinos : listDestinos });
-    },
-    carrito: (req, res) => {
-        res.render('carrito');
-    }, 
-    register: (req, res) => {
-        res.render('register');
-    },
-    login: (req, res) => {
-        res.render('login');
-    },
-    paquetes: (req, res) => {
-        res.render('paquetes', { listPaquetes : listPaquetes });
-    },
-    vuelos: (req, res) => {
-        res.render('vuelos', { listDestinos : listDestinos });
-    },
-    hoteles: (req, res) => {
-        res.render('hoteles', { listHoteles : listHoteles });
+  index: (req, res) => {
+    res.render('index', { listDestinos: listDestinos });
+  },
+  carrito: (req, res) => {
+    res.render('carrito');
+  },
+  register: (req, res) => {
+    res.render('register', { session: req.session });
+  },
+  store: (req, res) => {
+    const errors = validationResult(req)
+    if (!errors.isEmpty()) {
+      return res.render('register', { session: req.session, errors: errors.mapped() })
     }
+    const { fullname, username, email, birthday, password, confirmPassword } = req.body
+    req.session.fullname = fullname
+    req.session.username = username
+    req.session.email = email
+    req.session.birthday = birthday
+    req.session.password = password
+    req.session.confirmPassword = confirmPassword
+    res.render('register', { session: req.session })
+  },
+  login: (req, res) => {
+    res.render('login');
+  },
+  paquetes: (req, res) => {
+    res.render('paquetes', { listPaquetes: listPaquetes });
+  },
+  vuelos: (req, res) => {
+    res.render('vuelos', { listDestinos: listDestinos });
+  },
+  hoteles: (req, res) => {
+    res.render('hoteles', { listHoteles: listHoteles });
+  },
 };
+
+
+
+
 
 module.exports = controller;
