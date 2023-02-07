@@ -1,0 +1,179 @@
+<%-include('partials/head') %>
+
+<body>
+    <header>
+        <%-include('partials/nav') %>
+    </header>
+    <main>
+        <section class="container-img">
+            <div class="titulo">
+                <h1 class="parte1">ENCUENTRA TU</h1>
+                <h1 class="parte2">DESTINO</h1>
+                <p class="sub-titulo">más experiencias por vivir</p>
+                <div class="botones2">
+                    <a class="boton1" href="#" target="_blank">Descubrir</a>
+                    <a class="boton2" href="/register" target="_blank">Registrarse</a>
+                </div>
+            </div>
+        </section>
+        <section class="destinos">
+            <span>Experiencias</span>
+            <h2>DESTINOS</h2>
+            <p class="sub-text"> no pierdas la oportunidad de vivir una de estas experiencias.</p>
+            <div class="cards">
+                <article class="card">
+                    <img src="/img/misiones.jpg" alt="Misiones">
+                    <div class="destino">
+                        <i class=" icono fas fa-location-arrow"></i>
+                        <h2 class="tCard">Misiones</h2>
+                        <div class="description">
+                            <p class="subTcard">Lorem ipsum dolor sit amet consectetur adipis</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="/img/cordoba.jpg" alt="Cordoba">
+                    <div class="destino">
+                        <i class=" icono fas fa-location-arrow"></i>
+                        <h2 class="tCard">Cordoba</h2>
+                        <div class="description">
+                            <p class="subTcard">Lorem ipsum dolor sit amet consectetur adipis</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="/img/mar-dl-plata.jpg" alt="Mar del Plata">
+                    <div class="destino">
+                        <i class=" icono fas fa-location-arrow"></i>
+                        <h2 class="tCard">Mar del Plata</h2>
+                        <div class="description">
+                            <p class="subTcard">Lorem ipsum dolor sit amet consectetur adipis</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="/img/mendoza.jpg" alt="Mendoza">
+                    <div class="destino">
+                        <i class=" icono fas fa-location-arrow"></i>
+                        <h2 class="tCard">Buenos Aires</h2>
+                        <div class="description">
+                            <p class="subTcard">Lorem ipsum dolor sit amet consectetur adipis</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="/img/bariloche.jpg" alt="Bariloche">
+                    <div class="destino">
+                        <i class=" icono fas fa-location-arrow"></i>
+                        <h2 class="tCard">Bariloche</h2>
+                        <div class="description">
+                            <p class="subTcard">Lorem ipsum dolor sit amet consectetur adipis</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="/img/salta.jpg" alt="Salta">
+                    <div class="destino">
+                        <i class=" icono fas fa-location-arrow"></i>
+                        <h2 class="tCard">Salta</h2>
+                        <div class="description">
+                            <p class="subTcard">Lorem ipsum dolor sit amet consectetur adipis</p>
+                        </div>
+                    </div>
+                </article>
+            </div>
+        </section>
+        <div class="wave">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1440 320">
+                <path fill="#20BAE6" fill-opacity="1"
+                    d="M0,192L60,170.7C120,149,240,107,360,101.3C480,96,600,128,720,117.3C840,107,960,53,1080,53.3C1200,53,1320,107,1380,133.3L1440,160L1440,320L1380,320C1320,320,1200,320,1080,320C960,320,840,320,720,320C600,320,480,320,360,320C240,320,120,320,60,320L0,320Z">
+                </path>
+            </svg>
+            <div class="waveDescription">
+                <h3 class="waveT">¿No encontraste lo que buscabas?</h3>
+                <form action='/search' id='search-form' method='get' target='_top'>
+                    <input id='search-text' name='q' placeholder='Quiero ir a...' type='text' />
+                    <button id='search-button' type='submit'><span>Buscar</span></button>
+                </form>
+            </div>
+        </div>
+        <section class="feedbacks">
+            <div class="titulo-feedback">
+                <span>Opiniones</span>
+                <h2>VIAJEROS</h2>
+            </div>
+            <div class="feedback">
+                <div class="feed">
+                    <div class="img-feed">
+                        <img class="img-feedback" src="/img/avatar1.jpg" alt="random image">
+                    </div>
+                    <div class="description-feed">
+                        <h4>Matias Glock</h4>
+                        <h5>Visitó <strong>Bariloche</strong></h5>
+                        <p class="feedT">"Remember! This is bandit country. Shoot everyrhing that moves"</p>
+                        <div class="recomendacion">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="feed">
+                    <div class="img-feed">
+                        <img class="img-feedback" src="/img/avatar2.jpg" alt="random image">
+                    </div>
+                    <div class="description-feed">
+                        <h4>Florencia Villa</h4>
+                        <h5>Visitó <strong>Buenos Aires</strong></h5>
+                        <p class="feedT">"Let's go Buenos Aires"</p>
+                        <div class="recomendacion opc2">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="feed">
+                    <div class="img-feed">
+                        <img class="img-feedback" src="/img/avatar3.jpg" alt="random image">
+                    </div>
+                    <div class="description-feed">
+                        <h4>Alfredo Perez</h4>
+                        <h5>Visitó <strong>Misiones</strong></h5>
+                        <p class="feedT">"Gear up; We aren't going on a windy walk here!"</p>
+                        <div class="recomendacion opc3">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <article class="recomendaciones">
+            <div class="recomendacion-container">
+                <span>Elegido del mes</span>
+                <h2>RECOMENDACIONES</h2>
+            </div>
+            <div class="recomendacion-article">
+                <article class="article1">
+                    <h2 class="articleT">Cataratas del Iguazu</h2>
+                    <p class="articleP">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, quam id quaerat
+                        tenetur ratione esse sapiente, libero sunt, odio at nobis aspernatur. Iure asperiores quod ullam
+                        consequatur atque magnam ipsa?</p>
+                </article>
+                <article class="article2">
+                </article>
+            </div>
+        </article>
+    </main>
+    <%-include('partials/footer') %>
+</body>
+
+</html>
