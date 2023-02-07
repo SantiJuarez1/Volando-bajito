@@ -1,0 +1,128 @@
+<%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <section class="containerFormHoteles">
+            <form class="formHoteles" action="#" autocomplete="off">
+                <div class="mainForm">
+                    <div class="select2">
+                        <label for="destino">Voy a hospedarme en</label>
+                        <select name="provincia" id="provincia">
+                            <option value="">- Selecciona -</option>
+                            <option value="">Buenos Aires</option>
+                            <option value="">Mendoza</option>
+                            <option value="">Misiones</option>
+                            <option value="">Bariloche</option>
+                            <option value="">Salta</option>
+                            <option value="">Neuquen</option>
+                        </select>
+                    </div>
+                    <div class="select3">
+                        <label for="salida">Entrada</label>
+                        <input type="date" name="salida" id="salida" placeholder="Ingrese fecha de salida" />
+                    </div>
+                    <div class="select4">
+                        <label for="salida">Salida</label>
+                        <input type="date" name="salida" id="salida" placeholder="Ingrese fecha de regreso" />
+                    </div>
+                    <div class="select3">
+                        <input type="text" name="personas" id="personas"
+                            placeholder="Pesrsonas" />
+                    </div>
+                    <div class="submit-button">
+                        <input type="submit" value="Buscar">
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="destinos">
+            <span>Dulces sueños</span>
+            <h2>Hoteles</h2>
+            <div class="cards">
+                <% listHoteles.forEach((hoteles) => { %>
+                <article class="card">
+                    <img src="../images/<%= hoteles.img %>" alt="Hotel">
+                    <div class="destino">
+                        <i class=" icono fas fa-globe-americas"></i>
+                        <h2 class="tCard"><%= hoteles.titulo %></h2>
+                        <div class="description">
+                            <p class="subTcard"><%= hoteles.descripcion %></p>
+                    </div>
+                </article>
+                <% }) %>
+                <!-- <article class="card">
+                    <img src="../images/H2.jpeg" alt="Hotel">
+                    <div class="destino">
+                        <i class=" icono fas fa-globe-americas"></i>
+                        <h2 class="tCard">Hotel Salta</h2>
+                        <div class="description">
+                            <p class="subTcard">Se encuentra frente a la plaza 9 de Julio y cuenta con spa, gimnasio y piscina.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="../images/H3.jpeg" alt="Hotel">
+                    <div class="destino">
+                        <i class=" icono fas fa-globe-americas"></i>
+                        <h2 class="tCard"> Hotel Mendoza</h2>
+                        <div class="description">
+                            <p class="subTcard">En el centro de la ciudad y de los restaurantes, ofrece piscina al aire libre, solárium y zona de barbacoa.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="../images/h4.jpeg" alt="Hotel">
+                    <div class="destino">
+                        <i class=" icono fas fa-globe-americas"></i>
+                        <h2 class="tCard">Edelweiss</h2>
+                        <div class="description">
+                            <p class="subTcard">Ofrece habitaciones amplias y luminosas con vistas al lago Nahuel Huapi y a las montañas nevadas. </p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="../images/h5.webp" alt="Hotel">
+                    <div class="destino">
+                        <i class=" icono fas fas fa-globe-americas"></i>
+                        <h2 class="tCard">Exe Hotel Cataratas</h2>
+                        <div class="description">
+                            <p class="subTcard">Ofrece un intenso contacto con la naturaleza, fantásticas piscinas y varias opciones de ocio.</p>
+                        </div>
+                    </div>
+                </article>
+                <article class="card">
+                    <img src="../images/h8.jpg" alt="Hotel">
+                    <div class="destino">
+                        <i class=" icono fas fa-globe-americas"></i>
+                        <h2 class="tCard">Gran Panamericano</h2>
+                        <div class="description">
+                            <p class="subTcard">Ofrece habitaciones elegantes con wifi gratis. A 8 calles de la playa y varias opciones de ocio.</p>
+                        </div>
+                    </div>
+                </article> -->
+            </div>
+        </section>
+        <section class="tipsVuelos">
+            <h2>Tips de viaje</h2>
+            <div class="tips-containers">
+                <article class="tips">
+                    <h3 class="tCard4">Buscá y encontrá</h3>
+                    <p class="tCard5">El tipo de hotel que busques, en la ciudad que busques: lo tenemos. Solo es cuestión de elegir el destino.</p>
+                </article>
+                <article class="tips">
+                    <h3 class="tCard4">Elegí el ideal</h3>
+                    <p class="tCard5">Filtrá rápidamente por precio, ubicación y calificación, y descubrí en segundos el hotel que más te conviene.</p>
+                </article>
+                <article class="tips">
+                    <h3 class="tCard4">¡Ahorrá!</h3>
+                    <p class="tCard5">Conseguí el mejor precio entre todas las agencias y disfrutá tu viaje pagando menos.</p>
+                </article>
+                <article class="tips">
+                    <h3 class="tCard4">Seguinos</h3>
+                    <p class="tCard5">¡Seguinos en Facebook, Twitter o Instagram para enterarte novedades, ofertas de vuelos y tips de viajes!</p>
+                </article>
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer') %>

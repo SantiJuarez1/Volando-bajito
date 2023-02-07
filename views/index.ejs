@@ -1,0 +1,129 @@
+<%- include('partials/head') %>
+    </head>
+    <body>
+        <%- include('partials/header') %>
+        <main>
+            <section class="container-img">
+                <div class="titulo">
+                    <h1 class="parte1">ENCUENTRA TU</h1>
+                    <h1 class="parte2">DESTINO</h1>
+                    <p class="sub-titulo">más experiencias por vivir</p>
+                    <div class="botones2">
+                        <a class="boton1" href="../views/paquetes.ejs" target="_blank">Descubrir</a>
+                        <a class="boton2" href="../views/register.ejs" target="_blank">Registrarse</a>
+                    </div>
+                </div>
+            </section>
+            <section class="destinos">
+                <span>Experiencias</span>
+                <h2>DESTINOS</h2>
+                <p class="sub-text"> no pierdas la oportunidad de vivir una de estas experiencias.</p>
+                <div class="cards">
+                    <% listDestinos.forEach((destinys) => { %>
+                    <article class="card">
+                        <img src="../images/<%= destinys.img %>" alt="Misiones">
+                        <div class="destino">
+                            <i class=" icono fas fa-location-arrow"></i>
+                            <h2 class="tCard"><%= destinys.titulo %></h2>
+                            <div class="description">
+                                <p class="subTcard"><%= destinys.descripcion %></p>
+                            </div>
+                            <div>
+                                <span class="recomendado"><b>RECOMENDADO</b></span>
+                            </div>
+                        </div>
+                    </article>
+                    <% }) %>
+                </div>
+            </section>
+            <div class="wave">
+                <svg width="100%" heigth="60%" id="svg"  xmlns="http://www.w3.org/2000/svg" class="transition duration-300 ease-in-out delay-150">
+                    <path d="M 0,600 C 0,600 0,200 0,200 C 130.40000000000003,186.13333333333333 260.80000000000007,172.26666666666665 424,181 C 587.1999999999999,189.73333333333335 783.2,221.0666666666667 958,228 C 1132.8,234.9333333333333 1286.4,217.46666666666664 1440,200 C 1440,200 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="#20BAE6" fill-opacity="0.53" class="transition-all duration-300 ease-in-out delay-150 path-0"></path>
+                    <path d="M 0,600 C 0,600 0,400 0,400 C 144.53333333333336,368.6666666666667 289.0666666666667,337.33333333333337 440,344 C 590.9333333333333,350.66666666666663 748.2666666666667,395.3333333333333 916,411 C 1083.7333333333333,426.6666666666667 1261.8666666666668,413.33333333333337 1440,400 C 1440,400 1440,600 1440,600 Z" stroke="none" stroke-width="0" fill="#20BAE6" fill-opacity="1" class="transition-all duration-300 ease-in-out delay-150 path-1"></path></svg>
+                <div class="waveDescription">
+                    <h3 class="waveT">¿ No encontraste lo que buscabas ?</h3>
+                    <div class="user-input-box">
+                        <input class="input-form" type="text" name="buscador" id="buscador" placeholder="Quiero ir a..." />
+                        <button id='search-button' type='submit'><span class="buscar">Buscar</span></button>
+                    </div>
+                </div>
+            </div>
+            <section class="feedbacks">
+                <div class="titulo-feedback">
+                    <span>Opiniones</span>
+                    <h2>VIAJEROS</h2>
+                </div>
+                <div class="feedback">
+                    <div class="feed">
+                        <div class="img-feed">
+                            <img class="img-feedback" src="../images/avatar1.jpg" alt="random image">
+                        </div>
+                        <div class="description-feed">
+                            <h4>Matias Glock</h4>
+                            <h5>Visitó <strong>Bariloche</strong></h5>
+                            <p class="feedT">"Remember! This is bandit country. Shoot everyrhing that moves"</p>
+                            <div class="recomendacion">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed">
+                        <div class="img-feed">
+                            <img class="img-feedback" src="../images/avatar2.jpg" alt="random image">
+                        </div>
+                        <div class="description-feed">
+                            <h4>Florencia Villa</h4>
+                            <h5>Visitó <strong>Buenos Aires</strong></h5>
+                            <p class="feedT">"Let's go Buenos Aires"</p>
+                            <div class="recomendacion opc2">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="feed">
+                        <div class="img-feed">
+                            <img class="img-feedback" src="../images/avatar3.jpg" alt="random image">
+                        </div>
+                        <div class="description-feed">
+                            <h4>Alfredo Perez</h4>
+                            <h5>Visitó <strong>Misiones</strong></h5>
+                            <p class="feedT">"Gear up; We aren't going on a windy walk here!"</p>
+                            <div class="recomendacion opc3">
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="fas fa-star"></i>
+                                <i class="far fa-star"></i>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <article class="recomendaciones">
+                <div class="recomendacion-container">
+                    <span>Elejido del mes</span>
+                    <h2>RECOMENDACIONES</h2>
+                </div>
+                <div class="recomendacion-article">
+                    <article class="article1">
+                        <h2 class="articleT">Cataratas del Iguazu</h2>
+                        <p class="articleP">Lorem ipsum dolor, sit amet consectetur adipisicing elit. Ut, quam id
+                            quaerat
+                            tenetur ratione esse sapiente, libero sunt, odio at nobis aspernatur. Iure asperiores quod
+                            ullam
+                            consequatur atque magnam ipsa?</p>
+                    </article>
+                    <article class="article2">
+                    </article>
+                </div>
+            </article>
+        </main>
+        <%- include('partials/footer') %>        

@@ -1,0 +1,35 @@
+<%- include('partials/head') %>
+    </head>
+    <body>
+        <%- include('partials/header') %>
+        <!-- main -->
+        <p class="leyenda"><i class="fas fa-regular fas fa-cart-shopping"></i> Carrito <i
+                class="fas fa-regular fas fa-cart-shopping"></i> </p>
+        <hr>
+        <main>
+            <div class="item">
+                <img src="../images/paisaje 1.jpg" alt="">
+                <div class="textos">
+                    <p class="nombre-item">Paquete 1</p>
+                    <p>12.000</p>
+                </div>
+            </div>
+            <div class="item">
+                <img src="../images/paisaje 3.jpg" alt="">
+                <div class="textos">
+                    <p class="nombre-item">Paquete 2</p>
+                    <p>16.000</p>
+                </div>
+            </div>
+            <div class="total">
+                <p class="precio-total">Total: </p>
+                <p> $28.000</p>
+            </div>
+
+        </main>
+        <hr>
+            <div class="buttons">
+                <input class="vaciar-carrito" type="reset" value="Vaciar Carrito">
+                <input class="comprar" type="button" id="boton-comprar" onclick="botoncomprar()" value="Comprar">
+            </div>
+            <%- include('partials/footer') %>
