@@ -81,35 +81,13 @@
                             <p class="p1">Desde</p>
                             <p class="p2"><%= vuelos.desde %></p>
                         </div>
-                    </div>
-                    <div class="card-descripcion2">
-                        <p class="tCard3">A partir de</p>
-                        <span class="precio3"><b><%= vuelos.precio %></b></span>
+                        <span class="precio2"><b>$ <%= vuelos.precio %></b></span>
+                        <button class="comprar2">Añadir a carrito</button>
                     </div>
                 </article>
                 <% }) %>
             </div>
         </section>
-        <section class="tipsVuelos">
-            <h2>Tips de viaje</h2>
-            <div class="tips-containers">
-                <article class="tips">
-                    <h3 class="tCard4">Check in</h3>
-                    <p class="tCard5"> Realice su Web Check In dentro de las 36 horas y hasta 2 horas antes del horario de partida programado en vuelos domésticos.</p>
-                </article>
-                <article class="tips">
-                    <h3 class="tCard4">Documentación</h3>
-                    <p class="tCard5">Recuerde contar con toda la documentación requerida al momento de viajar. Documentos de Identidad, Pasaportes y Visas según el destino de su viaje.</p>
-                </article>
-                <article class="tips">
-                    <h3 class="tCard4">Destinos</h3>
-                    <p class="tCard5">Con vuelos a más de 20 destinos, como Bariloche, El Calafate, Mendoza, Ushuaia, Mar del Plata, entre otros.</p>
-                </article>
-                <article class="tips">
-                    <h3 class="tCard4">No Show</h3>
-                    <p class="tCard5">SI te surge algún inconveniente, siempre es recomendable cancelar el itinerario, antes de la fecha del viaje debido a que no todas las tarifas permiten la no presentación en el vuelo</p>
-                </article>
-            </div>
-        </section>
+        <%- include('partials/tips') %> -->
     </main>
     <%- include('partials/footer') %>

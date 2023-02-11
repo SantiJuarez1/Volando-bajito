@@ -1,15 +1,15 @@
-const { validationResult } = require('express-validator');
+/* const { validationResult } = require('express-validator'); */
 const path = require('path');
 const fs = require('fs');
 
 
-const destinoFile = fs.readFileSync(path.join(__dirname, '../models/destino.json'), 'utf-8');
+const destinoFile = fs.readFileSync(path.join(__dirname, '../data/destino.json'), 'utf-8');
 const listDestinos = JSON.parse(destinoFile);
 
-const paquetesFile = fs.readFileSync(path.join(__dirname, '../models/paquetes.json'), 'utf-8');
+const paquetesFile = fs.readFileSync(path.join(__dirname, '../data/paquetes.json'), 'utf-8');
 const listPaquetes = JSON.parse(paquetesFile);
 
-const hotelesFile = fs.readFileSync(path.join(__dirname, '../models/hoteles.json'), 'utf-8');
+const hotelesFile = fs.readFileSync(path.join(__dirname, '../data/hoteles.json'), 'utf-8');
 const listHoteles = JSON.parse(hotelesFile);
 
 const controller = {
@@ -20,9 +20,9 @@ const controller = {
     res.render('carrito');
   },
   register: (req, res) => {
-    res.render('register', { session: req.session });
+    res.render('register'/* , { session: req.session } */);
   },
-  store: (req, res) => {
+  /* store: (req, res) => {
     const errors = validationResult(req)
     if (!errors.isEmpty()) {
       return res.render('register', { session: req.session, errors: errors.mapped() })
@@ -35,7 +35,7 @@ const controller = {
     req.session.password = password
     req.session.confirmPassword = confirmPassword
     res.render('register', { session: req.session })
-  },
+  }, */
   login: (req, res) => {
     res.render('login');
   },
