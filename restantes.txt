@@ -1,5 +1,0 @@
-Validaciones login (isempty y si son usuarios registrados)
-Aplicar CRUD
-Pagina perfil usuario (si esta registrado dirigir desde login a perfil, caso contrario a register)
-Modificar sistema de inicio de sesion (boton mi cuenta cambiar a Iniciar sesion)
-Centralizar modos de login y register en un solo formulario
