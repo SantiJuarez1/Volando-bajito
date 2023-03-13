@@ -37,3 +37,31 @@ Dejar de hacer: no comunicarse
 hacer mas: Reunion weekly, puestas en comun para realizar cambios y mejorar la experiencia del usuario
 
 hacer menos: cargas manuales de git y en su lugar usar comandos 
+
+<--------------------------------------------------------------------------------------------------->
+
+Retro 5 
+
+Seguir haciendo: cumplir con los objetivos del proyecto
+
+empezar a hacer: Reunion weekly para ver progreso del proyecto
+
+Dejar de hacer: no comunicarse
+
+hacer mas: utilizar tablero de trello
+
+hacer menos: cargas manuales de git y en su lugar usar comandos 
+
+<--------------------------------------------------------------------------------------------------->
+
+Retro 6 
+
+Seguir haciendo: 
+
+empezar a hacer: 
+
+Dejar de hacer: 
+
+hacer mas: 
+
+hacer menos:  
