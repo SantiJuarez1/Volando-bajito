@@ -1,0 +1,70 @@
+<%- include('partials/head') %>
+    </head>
+
+    <body>
+        <%- include('partials/header') %>
+            <main>
+                <div class="containerFormHoteles">
+                    <form class="formHoteles" action="#" autocomplete="off">
+                        <div class="mainForm">
+                            <div class="select2">
+                                <label for="destino">Voy a hospedarme en</label>
+                                <select name="provincia" id="provincia">
+                                    <option value="">- Selecciona -</option>
+                                    <option value="">Buenos Aires</option>
+                                    <option value="">Mendoza</option>
+                                    <option value="">Misiones</option>
+                                    <option value="">Bariloche</option>
+                                    <option value="">Salta</option>
+                                    <option value="">Neuquen</option>
+                                </select>
+                            </div>
+                            <div class="select3">
+                                <label for="salida">Entrada</label>
+                                <input type="date" name="salida" id="salida" placeholder="Ingrese fecha de salida" />
+                            </div>
+                            <div class="select4">
+                                <label for="salida">Salida</label>
+                                <input type="date" name="salida" id="salida" placeholder="Ingrese fecha de regreso" />
+                            </div>
+                            <div class="select3">
+                                <input type="text" name="personas" id="personas" placeholder="Pesrsonas" />
+                            </div>
+                            <div class="submit-button">
+                                <input type="submit" value="Buscar">
+                            </div>
+                        </div>
+                    </form>
+                </div>
+                <section class="destinos">
+                    <span>Dulces sueños</span>
+                    <h2>Hoteles</h2>
+                    <div class="cards">
+                        <% listHoteles.forEach((hoteles)=> { %>
+                            <article class="card">
+                                <img src="../images/<%= hoteles.img %>" alt="Hotel">
+                                <div class="destino">
+                                    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                                    <lord-icon class="icono" src="https://cdn.lordicon.com/zzcjjxew.json"
+                                        trigger="hover" colors="primary:#0614ad,secondary:#0614ad"
+                                        style="width:36px;height:36px">
+                                    </lord-icon>
+                                    <h2 class="tCard">
+                                        <%= hoteles.titulo %>
+                                    </h2>
+                                    <div class="description">
+                                        <p class="subTcard">
+                                            <%= hoteles.descripcion %>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <span class="recomendado"><b>$<%= hoteles.precio %></b> por noche</span>
+                                    </div>
+                                    <button class="comprar3">Añadir a carrito</button>
+                            </article>
+                            <% }) %>
+                    </div>
+                </section>
+                <%- include('partials/tips') %> -->
+            </main>
+            <%- include('partials/footer') %> -->
