@@ -954,3 +954,10 @@ footer {
         display: none;
     }
 }
+
+/*Media Query nav*/
+@media (max-width:805px) {
+    nav{
+        display: none;
+    }
+}
