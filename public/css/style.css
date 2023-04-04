@@ -24,7 +24,6 @@ header {
 
 .logo {
     width: 140px;
-    margin-left: 60px;
     cursor: pointer;
     transition: all 0.3;
 }
@@ -70,14 +69,21 @@ header ul li a .icon {
     flex-direction: row;
     flex-wrap: nowrap;
 }
+/* separador de iconos*/
+li:not(:last-child){
+  border-inline-end:solid 2px #E9E9E9;
+}
 
 .login {
     border: 1px solid #0614AD;
-    padding: 10px 30px;
+    padding: 10px 10px;
     background-color: #0614AD;
     color: #ffffff;
     text-decoration: none;
     border-radius: 50px;
+    font-size: 16px;
+    max-height: 38px;
+    min-width: 86px;
 }
 
 #check {
@@ -118,7 +124,7 @@ lord-icon{
 }
 
 .parte1 {
-    color: white;
+    color: black;
 }
 
 .parte2 {
@@ -173,7 +179,6 @@ span {
 
 h2 {
     color: white;
-    font-size: 40px;
     padding-top: 10px;
 }
 
@@ -322,18 +327,20 @@ button:hover {
 
 .feedback {
     display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    padding: 0px 20px;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
 }
 
 .feed {
     background: linear-gradient(180deg, #20BAE6 0%, #0614AD 100%);
-    max-width: 500px;
-    height: 350px;
+    max-width: 650px;
+    max-height: 650px;
     border-radius: 10px;
     box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
     position: relative;
+    margin-top:15px;
+    margin-bottom:15px;
 }
 
 .img-feed {
@@ -351,8 +358,8 @@ button:hover {
 }
 
 .img-feedback {
-    height: 8.3rem;
-    width: 8.3rem;
+    height: 6.3rem;
+    width: 6.3rem;
     position: relative;
     border-radius: 100%;
     box-shadow: 1px 1px 2rem rgba(0, 0, 0, 0.3);
@@ -394,6 +401,21 @@ h5 {
     padding: 20px 20px 20px 60px;
 }
 
+@media (max-width:422px){
+    .description-feed {
+        padding: 55px 20px 20px 20px;
+        font-size: 25px;
+    }
+    .feedT {
+        font-size: 1.5rem;
+        line-height: 1.45;
+        color: #333;
+}
+.titulo {
+    padding: 0px;
+}
+}
+
 /* seccion recomendacion*/
 .recomendaciones {
     width: 100%;
@@ -409,13 +431,15 @@ h5 {
 
 .recomendacion-article {
     display: flex;
+    flex-direction: column;
+    align-items: center;
 }
 
 .article1 {
     animation: rotacion 20s infinite ease-in;
     background-size: cover;
-    width: 900px;
-    height: 500px;
+    max-width: 400px;
+    height: 400px;
 }
 
 .articleT {
@@ -430,9 +454,8 @@ h5 {
 
 .article2 {
     background-color: #0614AD;
-    position: absolute;
-    width: 450px;
-    height: 400px;
+    max-width: 450px;
+    min-height: 400px;
 }
 
 @keyframes rotacion {
@@ -494,11 +517,11 @@ footer {
 /* seccion sectionForm*/
 .sectionForm {
     width: 100%;
-    height: 500px;
+    max-height: 540px;
     padding-top: 60px;
+    padding-bottom: 60px;
     animation: slider 20s ease-in-out infinite;
-    background-size: cover;
-}
+    background-size: cover;}
 
 @keyframes slider {
     0% {
@@ -522,6 +545,7 @@ footer {
     background: rgba(0, 0, 0, 0.5);
     width: 40%;
     margin-left: 20px;
+    margin-bottom: 20px;
     padding: 20px;
     border-radius: 10px;
     box-shadow: inset -2px 2px 2px #00000040;
@@ -806,6 +830,7 @@ footer {
 }
 
 /*Media query*/
+/*
 @media screen and (max-width: 1440px) {
     .waveDescription {
         margin: 100px 450px;
@@ -855,8 +880,8 @@ footer {
     .boton {
         padding: 10px;
     }
-}
-
+}*/
+/*
 @media screen and (max-width: 800px) {
     .waveDescription {
         margin: 20px 150px;
@@ -891,9 +916,9 @@ footer {
         margin-left: 10px;
         font-size: 12px;
     }
-}
-
-@media screen and (max-width: 480px) {
+}*/
+/*
+@media screen and (min-width: 480px) {
     .container-img {
         height: 400px;
     }
@@ -953,7 +978,10 @@ footer {
     .boton {
         display: none;
     }
-}
+    h2 {
+        font-size: 40px;
+    }
+}*/
 
 /*Media Query nav*/
 @media (max-width:805px) {
