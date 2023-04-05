@@ -1,0 +1,67 @@
+<%- include('partials/head') %>
+    </head>
+    <body>
+        <main>
+            <%- include('partials/header') %>
+                <div class="container products-wrapper">
+                    <div class="row">
+                        <div class="col-12">
+                            <h2 class="products-title">Estás editando: <%= Product.title %> </h2>
+                        </div>
+                    </div>
+                    <div class="col-12">
+                        <form action="/edit/<%= Product.id %>?_method=PUT" method="POST">
+                            <div class="product-detail">
+                                <div class="col">
+                                    <label for="title" class="form-label">Nombre del producto: </label>
+                                    <input type="text" name="title" placeholder="Ej: Neuquen" class="form-input" value="<%= Product.title %>">
+                                    <% if (locals.errors && locals.errors.title) { %>
+                                        <p><%= errors.title.msg %></p>
+                                    <% } %>
+                                </div>
+                                <div class="col">
+                                    <label for="description" class="form-label">Descipción:</label>
+                                    <input type="text" name="description" placeholder="Ingrese una breve descripción" class="form-input" value="<%= Product.description %>">
+                                    <% if (locals.errors && locals.errors.description) { %>
+                                        <p><%= errors.description.msg %></p>
+                                    <% } %>
+                                </div>
+                                <div class="col">
+                                    <label for="price" class="form-label">Precio del producto: </label>
+                                    <input type="text" name="price" placeholder="Ej: 24.000" class="form-input" value="<%= Product.price %>">
+                                    <% if (locals.errors && locals.errors.price) { %>
+                                        <p><%= errors.price.msg %></p>
+                                    <% } %>
+                                </div>
+                                <div class="col">
+                                    <label for="excursiones" class="form-label">Excursiones:</label>
+                                    <input type="text" name="item_1" placeholder="Excursion al ..." class="form-input" value="<%= Product.item_1 %>">
+                                    <% if (locals.errors && locals.errors.item_1) { %>
+                                        <p><%= errors.item_1.msg %></p>
+                                    <% } %>
+                                    <input type="text" name="item_2" placeholder="Trekking al ..." class="form-input" value="<%= Product.item_2 %>">
+                                    <% if (locals.errors && locals.errors.item_2) { %>
+                                        <p><%= errors.item_2.msg %></p>
+                                    <% } %>
+                                    <input type="text" name="item_3" placeholder="Día de ..." class="form-input" value="<%= Product.item_3 %>">
+                                    <% if (locals.errors && locals.errors.item_3) { %>
+                                        <p><%= errors.item_3.msg %></p>
+                                    <% } %>
+                                    <input type="text" name="item_4" placeholder="Visita a ..." class="form-input" value="<%= Product.item_4 %>">
+                                    <% if (locals.errors && locals.errors.item_4) { %>
+                                        <p><%= errors.item_4.msg %></p>
+                                    <% } %>
+                                    <input type="text" name="item_5" placeholder="Excursion al ..." class="form-input" value="<%= Product.item_5 %>">
+                                    <% if (locals.errors && locals.errors.item_5) { %>
+                                        <p><%= errors.item_5.msg %></p>
+                                    <% } %>
+                                </div>
+                                <div class="col-button">
+                                    <button type="submit" class="actualizar">Actualizar</button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+        </main>
+        <%- include('partials/footer') %>

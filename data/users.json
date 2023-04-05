@@ -1,0 +1,35 @@
+[
+ {
+  "id": 1,
+  "fullname": "Marcia Veron",
+  "username": "marve",
+  "email": "mar@travel.com",
+  "birthday": "2001-01-01",
+  "password": "$2a$10$lQbt2D6iACUqJxWvsEvQ0OJ5zaFsXs82/BoHYg8wTNo8cReqa3bsG",
+  "confirmPassword": "Hola123",
+  "notifications": "on",
+  "submit": "Enviar"
+ },
+ {
+  "id": 2,
+  "fullname": "Marcos Gutierrez",
+  "username": "marc",
+  "email": "marc@travel.com",
+  "birthday": "2001-02-01",
+  "password": "$2a$10$BCpbwPQSH5xD3nTls1gYHel9AgA0zTxbpSdBOTyWz1EWeszs5Mk2G",
+  "confirmPassword": "Chau123",
+  "notifications": "on",
+  "submit": "Enviar"
+ },
+ {
+  "id": 3,
+  "fullname": "Santiago Juares",
+  "username": "santi",
+  "email": "santi@travel.com",
+  "birthday": "20001-03-01",
+  "password": "$2a$10$d/VItW3t9at92N3G4q1gmemGrqLfxXJDXo3ZERFlMDhijK83sDXle",
+  "confirmPassword": "Hola678",
+  "notifications": "on",
+  "submit": "Enviar"
+ }
+]
