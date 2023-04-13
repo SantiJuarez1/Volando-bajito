@@ -1,0 +1,137 @@
+<%- include('partials/head') %>
+    </head>
+
+    <body>
+        <%- include('partials/header') %>
+            <main>
+                <section class="container-img">
+                    <div class="titulo">
+                        <h1 class="parte1">ENCUENTRA TU</h1>
+                        <h1 class="parte2">DESTINO</h1>
+                        <p class="sub-titulo">más experiencias por vivir</p>
+                        <div class="botones2">
+                            <a class="boton1" href="/paquetes">Descubrir</a>
+                            <a class="boton2" href="/user/register">Registrarse</a>
+                        </div>
+                    </div>
+                </section>
+                <section class="destinos">
+                    <span>Experiencias</span>
+                    <h2>DESTINOS</h2>
+                    <p class="sub-text"> No pierdas la oportunidad de vivir una de estas experiencias.</p>
+                    <div class="cards">
+                        <% products.forEach((product) => {  %>
+                            <article class="card">
+                                <img src="/images/<%= product.images0 %>" alt="">
+                                <div class="destino">
+                                    <a href="/detail/<%= product.id %>">
+                                        <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                                        <lord-icon class="icono" src="https://cdn.lordicon.com/udwhdpod.json"
+                                            trigger="hover" colors="primary:#ffff,secondary:#ffff"
+                                            style="width:36px;height:36px">
+                                        </lord-icon>
+                                    </a>
+                                    <h2 class="tCard">
+                                        <%= product.title %>
+                                    </h2>
+                                    <div class="description">
+                                        <p class="subTcard">
+                                            <%= product.description %>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <span class="recomendado"><b>RECOMENDADO</b></span>
+                                    </div>
+                                </div>
+                            </article>
+                        <% }) %> 
+                    </div>
+                </section>
+                <div class="buscador-container">
+                    <div class="buscador-description">
+                        <h3 class="waveT">¿ No encontraste lo que buscabas ?</h3>
+                        <form class="user-input-box" action="#" method="GET">
+                            <input class="input-form" type="text" name="buscador" placeholder="Quiero ir a..." />
+                            <input type='submit' value="Buscar"></input>
+                        </form>
+                    </div>
+                </div>
+                <article class="recomendaciones">
+                    <div class="recomendacion-container">
+                        <span>Elejido del mes</span>
+                        <h2>RECOMENDACIONES</h2>
+                    </div>
+                    <div class="recomendacion-article">
+                        <article class="article1">
+                        </article>
+                        <article class="article2">
+                            <h2 class="articleT">Cataratas del Iguazu</h2>
+                            <p class="articleP">Sumérjase en un Santuario Natural en Medio de la Selva. Patrimonio
+                                natural de la humanidad desde 1984 y una de las 7 maravillas naturales del mundo desde
+                                2011, el Parque Nacional Iguazú es un universo natural único. Lleno de vida, abundante
+                                vegetación y 275 saltos, entre ellos la Garganta del Diablo, cayendo a 82 metros de
+                                altura, es el lugar ideal para conectar con la naturaleza.</p>
+                        </article>
+                    </div>
+                </article>
+                <section class="feedbacks">
+                    <div class="titulo-feedback">
+                        <span>Opiniones</span>
+                        <h2>VIAJEROS</h2>
+                    </div>
+                    <div class="feedback">
+                        <div class="feed">
+                            <div class="img-feed">
+                                <img class="img-feedback" src="/images/avatar1.jpg" alt="random image">
+                            </div>
+                            <div class="description-feed">
+                                <h4>Matias Glock</h4>
+                                <h5>Visitó <strong>Bariloche</strong></h5>
+                                <p class="feedT">"Remember! This is bandit country. Shoot everyrhing that moves"</p>
+                                <div class="recomendacion">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feed">
+                            <div class="img-feed">
+                                <img class="img-feedback" src="/images/avatar2.jpg" alt="random image">
+                            </div>
+                            <div class="description-feed">
+                                <h4>Florencia Villa</h4>
+                                <h5>Visitó <strong>Buenos Aires</strong></h5>
+                                <p class="feedT">"Let's go Buenos Aires"</p>
+                                <div class="recomendacion opc2">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="feed">
+                            <div class="img-feed">
+                                <img class="img-feedback" src="/images/avatar3.jpg" alt="random image">
+                            </div>
+                            <div class="description-feed">
+                                <h4>Alfredo Perez</h4>
+                                <h5>Visitó <strong>Misiones</strong></h5>
+                                <p class="feedT">"Gear up; We aren't going on a windy walk here!"</p>
+                                <div class="recomendacion opc3">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="far fa-star"></i>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+            <%- include('partials/footer') %>

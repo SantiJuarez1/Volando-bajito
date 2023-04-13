@@ -1,0 +1,171 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Roboto", sans-serif;
+    background-image: url("/img/paisaje\ 1.jpg");
+}
+
+.top-header {
+    background: linear-gradient(90deg, #20BAE6 10%, #0614AD 90%);
+    padding-bottom: 5px;
+    padding-left: 5%;
+    max-height: 20%;
+}
+
+.logo-volandobajito {
+    max-width: 125px;
+
+}
+
+.leyenda {
+    font-family: impact, serif;
+    text-align: center;
+    font-size: xx-large;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: black;
+    background-color: #aaaaaa;
+}
+
+hr {
+    background: linear-gradient(90deg, #20BAE6 10%, #0614AD 90%);
+    height: 5px;
+}
+
+nav {
+    display: flex;
+    flex-direction: row;
+    background-color: #333;
+    padding: 10px 8px 10px 8px;
+    font-size: 14px;
+
+}
+
+a {
+    font-family: "Roboto", sans-serif;
+    text-decoration: none;
+    color: white;
+    margin-right: 15px;
+}
+
+.btn-carrito {
+    background-color: #aaaaaa;
+    border-radius: 10px;
+    width: 23px;
+    height: 22px;
+    border-color: #aaaaaa;
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    height: 65%;
+    padding-top: 10px;
+
+}
+
+.item {
+    max-height: 120px;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-top: 10px;
+    padding: 5px;
+}
+
+footer {
+    padding: 20px;
+    background-color: #333;
+}
+
+.buttons {
+    text-align: center;
+}
+.vaciar-carrito .comprar :hover{
+    background-color: #aaaaaa;
+    color: #20BAE6;
+    transition: background-color, 0.5s,color,0.5s;
+}
+
+.vaciar-carrito {
+    font-family: "Roboto", sans-serif;
+    height: 30px;
+    margin-right: 5px;
+    background-color: #aaaaaa;
+    border-radius: 5px;
+    border-color: #333;
+}
+
+.comprar {
+    font-family: "Roboto", sans-serif;
+    height: 30px;
+    background-color: #aaaaaa;
+    border-radius: 5px;
+    border-color: #333;
+}
+
+
+.titulo {
+    font-size: 22px;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.60);
+    margin-bottom: 20px;
+}
+
+.item {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    padding: 20px 0;
+    border-bottom: 1px solid rgba(112, 112, 112, 0.60);
+}
+
+.item img {
+    width: 85px;
+    max-width: 85px;
+}
+
+.textos {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-left: auto;
+}
+
+.textos .nombre-item {
+    color: #333;
+}
+
+.total {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    text-align: center;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 25px;
+}
+.precio-total{
+    font-family: impact, serif;
+}
+/* Media queries */
+
+@media (min-width:426px) {
+    .item {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+
+    .item img {
+        width: 125px;
+    }
+
+    .textos {
+        font-size: 18px;
+    }
+}

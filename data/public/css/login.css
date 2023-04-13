@@ -1,0 +1,104 @@
+body {
+    height: 300px; 
+    background: url(../../images/login.jpg);
+}
+
+.form {
+    display:flex;
+    width: 90%;
+    margin: 40px 60px;
+}
+
+.logo-container {
+    margin: auto;
+}
+
+.container-form {
+    width: 50%;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 20px 10px;
+    border-radius: 10px;
+    box-shadow: inset -2px 2px 2px #00000040;
+}
+
+.title {
+    font-size: 26px;
+    font-weight: 600;
+    text-align: center;
+    padding-bottom: 6px;
+    color:white;
+    text-shadow: 2px 2px 2px black;
+    border-bottom: solid 1px white;
+}
+
+.main-user-info {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.user-input-box {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    width:90%;
+    padding: 10px 20px;
+    margin-left: 35px;
+}
+
+.user-input-box label {
+    width: 95%;
+    color: white;
+    font-size: 20px;
+    font-weight: 400;
+    margin: 5px 0;
+}
+
+.user-input-box .input-form {
+    height: 40px;
+    width: 95%;
+    border-radius: 7px;
+    outline: none;
+    border: 1px solid grey;
+    padding: 0 10px;
+}
+
+.user-input-box:nth-child(2n){
+    justify-content: end;
+}
+
+.email-notifications-box, .password-remember {
+    color: white;
+    padding-top: 10px;
+    padding-left: 60px ;
+}
+
+.form-submit-button {
+    margin-top: 20px;
+    padding-left: 20px;
+}
+
+.form-submit-button input {
+    display: block;
+    width: 95%;
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 10px;
+    border: none;
+    border-radius: 3px;
+    color: rgb(228, 221, 221);
+    background: #20BAE6;
+}
+
+.form-submit-button input:hover {
+    background-color: #0614AD;
+    color: rgb(255, 255, 255);
+}
+
+.register-error-message {
+    color: salmon;
+    font-style: italic;
+    font-size: 15px;
+}
+
+
