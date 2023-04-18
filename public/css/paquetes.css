@@ -1,0 +1,90 @@
+/* ########### PAQUETES ############## */
+.activities {
+    width: 80%;
+    margin: 0 auto;
+}
+
+.titulo2 {
+    width: 100%;
+    margin: 0 auto;
+    padding: 30px;
+    text-align: center;
+}
+
+.container-cards {
+    width: 100%;
+    display: grid;
+    grid-auto-rows: 34rem;
+    grid-template-columns: repeat(auto-fill, minmax(18rem, 1fr));
+    gap: 2rem;
+    justify-content: center;
+    justify-items: center;
+}
+
+
+.card-actividades {
+    cursor: pointer;
+    width: 280px;
+    height: 440px;
+    display: flex;
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
+    flex-direction: column;
+}
+
+.card-actividades img {
+    border-radius: 25px 25px 25px 0px;
+    border-right: 5px solid #0A1931;
+}
+
+img {
+    max-width: 240px;
+    max-height: 120px;
+    margin: 10px auto;
+    transition: all 0.3;
+}
+
+.destiny {
+    width: fit-content;
+    margin: 0px 20px;
+    padding-top: 20px;
+}
+
+.tCard2 {
+    color: #0614AD;
+    font-size: 20px;
+}
+
+.subTcard2 {
+    padding-top: 12px;
+    padding-bottom: 20px;
+    font-size: 12px;
+    max-height: 190px;
+}
+
+.comprar {
+    font-size: 16px;
+    background-color: #20BAE6;
+    color: white;
+    border-radius: 5px;
+    padding: 12px 4px;
+    width: 121px;
+}
+
+.comprar:hover {
+    background: #0614AD;
+}
+
+.precio {
+    position: absolute;
+    background: #0614AD;
+    padding: 10px 20px;
+    text-align: center;
+    font-size: 24px;
+    font-weight: 200;
+    color: #fff;
+    margin-left: 140px;
+    border-radius: 7px;
+    box-shadow: -10px 20px 15px -10px rgba(0, 0, 0, 0.3);
+}

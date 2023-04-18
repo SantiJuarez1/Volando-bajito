@@ -1,0 +1,266 @@
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    max-width: 600px;
+    margin: auto;
+    padding: 0px 10px;
+    color: white;
+}
+  
+  label {
+    display: block;
+    margin-top: 1em;
+    font-weight: bold;
+  }
+  
+  input[type="text"],
+  input[type="email"],
+  input[type="tel"],
+  input[type="date"],
+  input[type="password"] 
+  input[type="file"]{
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 0.5em;
+    box-sizing: border-box;
+  }
+  
+  select {
+    width: 100%;
+    padding: 0.5em;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    margin-top: 0.5em;
+    box-sizing: border-box;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: #3e8e41;
+  }
+  
+
+/* sector de foto de perfil */
+div.vistaPrevia {
+    background: linear-gradient(180deg, #0614AD 0%, #20BAE6 100%);
+    border-style: hidden;
+    color: lightgray;
+    display: flex;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 40px 0px 15px;
+    width: 400px;
+    flex-direction: column;
+    flex-wrap: nowrap;
+    align-items: center;
+}
+
+.profilePic {
+    border-radius: 50%;
+    max-height: 80px;
+    max-width: 80px;
+} 
+
+/* Botones */
+
+.btns{
+    padding: 15px;
+}
+
+.btnSubmit{border: 1px solid #0614AD;
+padding: 10px 40px;
+background-color: #0614AD;
+color: #ffffff;
+text-decoration: none;
+border-radius: 50px;}
+
+.btnReset{
+    border: 1px solid #333;
+    padding: 10px 40px;
+    background-color: #333;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+/* sector de encabezado de pago */
+/* fieldset.infoPago {
+    background: linear-gradient(180deg, #0614AD 0%, #20BAE6 100%);
+    border-radius: 15px;
+    border-style: hidden;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin: 20px 0px 10px;
+    color: lightgray;
+    width: 600px;
+} */ 
+
+/* sector de informacion de pago */
+/*
+fieldset.datosTarjeta {
+    border-style: hidden;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 10px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    min-width: 320px;
+    min-height: 115px;
+    max-width: 600px;
+}*/
+
+/* botones enviar - cancelar */
+/*
+div.buttons{
+   display: flex;
+   inline-size: auto;
+   align-items: center;
+   margin: auto;
+   justify-content: center;
+   gap: 15px;
+   margin-top: 20px;
+   margin-bottom: 20px;
+   box-sizing: border-box;
+}
+.submit{
+  background-color: #20BAE6;
+  color: #fff;
+  border-style: hidden;
+  border-radius: 5px;
+  padding: 10px 15px;
+
+}
+.reset{
+    background-color: #20BAE6;
+    color: #fff;
+    border-style: hidden;
+    border-radius: 5px;
+    padding: 10px 15px;
+}
+.infoUsuario {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}*/
+
+/*footer*/
+/*
+footer {
+    background-color: black;
+    display: flex;
+    padding: 20px 20px;
+    justify-content: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+}*/
+
+/*Media Querys*/
+
+/*@media (max-width:813px) {
+    nav{
+        display: none;
+    }
+    .bar-btn {
+        font-size: 25px;
+        color: white;
+        cursor: pointer;
+    }
+}
+
+@media (max-width:620px) {
+    fieldset.encabezado {
+        background: linear-gradient(180deg, #0614AD 0%, #20BAE6 100%);
+        border-style: hidden;
+        color: lightgray;
+        border-radius: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 40px 0px 15px;
+        width: 400px;
+    }
+    fieldset.infoPago {
+        background: linear-gradient(180deg, #0614AD 0%, #20BAE6 100%);
+        border-radius: 15px;
+        border-style: hidden;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        margin: 20px 0px 10px;
+        color: lightgray;
+        width: 400px;
+    }
+}
+
+@media (max-width:318px) {
+    footer {
+        background-color: black;
+        display: flex;
+        padding: 20px 20px;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+@media (min-width:320px){
+    
+    fieldset.encabezado {
+        background: linear-gradient(180deg, #0614AD 0%, #20BAE6 100%);
+        border-style: hidden;
+        color: lightgray;
+        border-radius: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 40px 0px 15px;
+        width: 300px;
+    }
+
+    fieldset.infoPago {
+        background: linear-gradient(180deg, #0614AD 0%, #20BAE6 100%);
+        border-radius: 15px;
+        border-style: hidden;
+        padding: 10px 0px;
+        margin: 20px 0px 10px;
+        color: lightgray;
+        width: 312px;
+        font-size: 11px;
+    }
+
+    fieldset.infoUser {
+        border-style: hidden;
+        border-radius: 15px;
+        padding: 24px 5px 24px 10px;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        min-width: 300px;
+        min-height: 240px;
+        max-width: 420px;
+        justify-content: flex-start;
+    }
+    
+    fieldset.datosTarjeta {
+        border-style: hidden;
+        border-radius: 15px;
+        padding: 20px 74px;
+        margin: 10px;
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        min-width: 320px;
+        min-height: 115px;
+        max-width: 600px;
+        font-size: 14px;
+    }
+
+} */

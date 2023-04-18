@@ -1,0 +1,29 @@
+<%- include('partials/head') %>
+<link rel="stylesheet" href="/css/paquetes.css">
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <section class="activities">
+            <div class="titulo2">
+                <span>Are you ready?</span>
+                <h2>ACTIVIDADES</h2>
+            </div>
+            <div class="container-cards">
+                <% listPaquetes.forEach((paquete) => { %>
+                <article class="card-actividades">
+                    <img src="../images/<%= paquete.img %>" alt="">
+                    <div class="destiny">
+                        <h2 class="tCard2"><%= paquete.titulo %></h2>
+                        <p class="subTcard2"><%= paquete.descripcion %></p>
+                        <div class="description2">
+                            <span class="precio"><b><%= paquete.precio %></b></span>
+                            <button class="comprar">Añadir a carrito</button>
+                        </div>  
+                    </div>
+                </article>
+                <% }) %>
+            </div>
+        </section>
+    </main>
+    <%- include('partials/footer') %>

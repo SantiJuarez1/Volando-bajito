@@ -1,0 +1,109 @@
+<%- include('partials/head') %>
+    <link rel="stylesheet" href="/css/perfil.css">
+    </head>
+
+    <body>
+        <%- include('partials/header') %>
+            <main>
+                <form method="post" action='#' class="infoUsuario">
+                    <div class="vistaPrevia">
+                        <img class="profilePic" src="\images\avatar1.jpg">
+                        <h3>Nombre completo</h3>
+                        <p>email@example.com</p>
+                    </div>
+
+                    <h2>Editar información del perfil</h2>
+                    <label for="name">Full Name:</label>
+                    <input type="text" id="name" name="name" required>
+
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+
+                    <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file"
+                        name="file" /></label>
+
+                    <label for="phone">Phone Number:</label>
+                    <input type="tel" id="phone" name="phone" required>
+
+                    <label for="dob">Date of Birth:</label>
+                    <input type="date" id="dob" name="dob" required>
+
+                    <label for="gender">Gender:</label>
+                    <select id="gender" name="gender" required>
+                        <option value="">Please select</option>
+                        <option value="male">Male</option>
+                        <option value="female">Female</option>
+                        <option value="other">Other</option>
+                    </select>
+
+                    <label for="address">Address:</label>
+                    <input type="text" id="address" name="address" required>
+                <div class="btns">
+                    <button class="btnSubmit" type="submit">Submit</button>
+                    <button class="btnReset" type="reset">Reset</button>
+                </div>
+                </form>
+
+                <!-- <fieldset class="encabezado">
+                <form method="post" action='#'class="infoUsuario">
+                    
+                        <img class="profilePic" src="\images\avatar1.jpg">
+                        <h3>Nombre completo</h3>
+                        <p>email@example.com</p>
+
+                    </fieldset>
+                    <fieldset class="infoUser">
+                        <label for="first-name">Nombre: <input id="first-name" name="first-name" type="text"
+                                required /></label>
+                        <label for="last-name">Apellido: <input id="last-name" name="last-name" type="text"
+                                required /></label>
+                        <label for="email">Email: <input id="email" name="email" type="email"
+                                placeholder="email@example.com" required /></label>
+                        <label for="new-password">Password: <input id="new-password" name="new-password" type="password"
+                                pattern="[a-z0-5]{8,}" required /></label>
+                        <label for="age">Fecha de nacimiento: <input id="age" type="date" name="age" min="18"
+                                max="120" /></label>
+                        <label> Género:
+                            <label for="Masculino"><input id="Masculino" type="radio" name="genre" class="inline" />
+                                Masculino</label>
+                            <label for="Femenino"><input id="Femenino" type="radio" name="genre" class="inline" />
+                                Femenino</label>
+                        </label>
+                        <label for="profile-picture">Upload a profile picture: <input id="profile-picture" type="file"
+                                name="file" /></label>
+                    </fieldset>
+                    <fieldset class="infoPago">
+                        <h3>Informacion de Pago</h3>
+                        <p>completa tu informacion de pago para agilizar tu compra!</p>
+                    </fieldset>
+                    <fieldset class="datosTarjeta">
+                        <h3>Datos de Tarjeta:</h3>
+                        <label for="cardNumber">Número
+                            <input id="cardNumber" type="text" name="cardNumber" minlength="16" maxlength="16"
+                                placeholder="ingresá los 16 digitos de la tarjeta" required>
+                        </label>
+                        <label>Vencimiento
+                            <input id="vencimiento" name="vencimiento" type="month">
+                        </label>
+                        <label for="cardName">Titular:
+                            <input id="cardName" name="cardName" type="text"
+                                placeholder="Nombre completo como figura en la tarjeta">
+                        </label>
+                        <label for="documento">Tipo y número de documento del Titular:
+                            <select id="tipoDocumento" name="tipoDocumento">
+                                <option value="">(seleccionar)</option>
+                                <option value="1">DNI</option>
+                                <option value="2">PASAPORTE</option>
+                                <option value="3">OTRO</option>
+                            </select>
+                            <input id="documento" name="documento" type="text" minlength="8" maxlength="8"
+                                placeholder="número de documento">
+                        </label>
+                    </fieldset>
+                    <div class="buttons">
+                        <input class="submit" type="submit" value="enviar" />
+                        <input class="reset" type="reset" value="cancelar" />
+                    </div>
+                </form> -->
+            </main>
+            <%- include('partials/footer') %>
