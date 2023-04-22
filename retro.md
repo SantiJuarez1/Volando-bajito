@@ -56,6 +56,34 @@ hacer menos: cargas manuales de git y en su lugar usar comandos
 
 Retro 6 
 
+Seguir haciendo: cumplir con los objetivos del proyecto
+
+empezar a hacer: Reunion weekly para ver progreso del proyecto
+
+Dejar de hacer: no practicar funcionamiento de git hub
+
+hacer mas: establecer objetivos semanales
+
+hacer menos:  no actualizar/modificar tareas del tablero de trello
+
+<--------------------------------------------------------------------------------------------------->
+
+Retro 7 
+
+Seguir haciendo: 
+
+empezar a hacer: 
+
+Dejar de hacer: 
+
+hacer mas: 
+
+hacer menos:  
+
+<--------------------------------------------------------------------------------------------------->
+
+Retro 8 
+
 Seguir haciendo: 
 
 empezar a hacer: 
