@@ -1,0 +1,63 @@
+<%-include('partials/head') %>
+<link rel="stylesheet" href="/css/perfil.css">
+</head>
+    <body>
+        <%- include('partials/header') %>
+            <main>
+                <h2>Bienvenido a tu perfil <%= locals.session.fullname %> </h2>
+                <a href="/user/logout">
+                    <button>Salir</button>
+                </a>
+                <form method="post" action='https://register-demo.freecodecamp.org'>
+                    <fieldset class="encabezado">
+                        <img class="profilePic" src="\images\avatar1.jpg">
+                    </fieldset>
+                    <fieldset class="infoUser">
+                        <label for="email">Email: <input id="email" name="email" type="email"
+                                placeholder="email@example.com" required /></label>
+                        <label for="telefono">Telefono: <input id="new-password" name="telefono" type="number"
+                                required /></label>
+                        <label for="age">Fecha de nacimiento: <input id="age" type="date" name="age" min="18"
+                                max="120" /></label>
+                        <label> Género:
+                            <label for="Masculino"><input id="Masculino" type="radio" name="genre" class="inline" />
+                                Masculino</label>
+                            <label for="Femenino"><input id="Femenino" type="radio" name="genre" class="inline" />
+                                Femenino</label>
+                        </label>
+                    </fieldset>
+                    <fieldset class="infoPago">
+                        <h3>Informacion de Pago</h3>
+                        <p>completa tu informacion de pago para agilizar tu compra!</p>
+                    </fieldset>
+                    <fieldset class="datosTarjeta">
+                        <h3>Datos de Tarjeta:</h3>
+                        <label for="cardNumber">Número
+                            <input id="cardNumber" type="text" name="cardNumber" minlength="16" maxlength="16"
+                                placeholder="ingresá los 16 digitos de la tarjeta" required>
+                        </label>
+                        <label>Vencimiento
+                            <input id="vencimiento" name="vencimiento" type="month">
+                        </label>
+                        <label for="cardName">Titular:
+                            <input id="cardName" name="cardName" type="text"
+                                placeholder="Nombre completo como figura en la tarjeta">
+                        </label>
+                        <label for="documento">Tipo y número de documento del Titular:
+                            <select id="tipoDocumento" name="tipoDocumento">
+                                <option value="">(seleccionar)</option>
+                                <option value="1">DNI</option>
+                                <option value="2">PASAPORTE</option>
+                                <option value="3">OTRO</option>
+                            </select>
+                            <input id="documento" name="documento" type="text" minlength="8" maxlength="8"
+                                placeholder="número de documento">
+                        </label>
+                    </fieldset>
+                    <div class="buttons">
+                        <input class="submit" type="submit" value="Guardar" />
+                        <input class="reset" type="reset" value="Cancelar" />
+                    </div>
+                </form>
+            </main>
+            <%- include('partials/footer') %>
