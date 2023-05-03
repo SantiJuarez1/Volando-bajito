@@ -1,0 +1,84 @@
+<%- include('partials/head') %>
+    <link rel="stylesheet" href="/css/admin.css">
+    </head>
+
+    <body>
+        <%- include('partials/header') %>
+            <main class="container-fluid">
+                <!--Administrador de productos-->
+                <section class="row">
+                    
+                        <h2 class="adminTitle">Administrador de Productos</h2>
+                    
+                    <article class="adminForm">
+                        <a class="btnAdd" href="#">
+                            <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/uukerzzv.json"
+                                trigger="hover"
+                                colors="primary:#0000,secondary:#20BAE6"
+                                style="width:60px;height:60px">
+                            </lord-icon>
+                        </a>
+                        <form action="#" method="GET">
+                            <input class="input" type="text" name="buscador" placeholder="|" />
+                            <input class="submit" type='submit' value="Buscar"></input>
+                        </form>
+                    </article>
+                    <article class="aminTable">
+                        <table class="table">
+                            <thead>
+                                <tr>
+                                    <th scope="col">Id</th>
+                                    <th scope="col">Nombre</th>
+                                    <th scope="col">Categoría</th>
+                                    <th scope="col">Ver</th>
+                                    <th scope="col">Editar</th>
+                                    <th scope="col">Borrar</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr class="rellenoTable">
+                                    <td>id</td>
+                                    <td>name</td>
+                                    <td>categoria name </td>
+                                    <td>
+                                        <a href="#"> 
+                                        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                                        <lord-icon
+                                            src="https://cdn.lordicon.com/tyounuzx.json"
+                                            trigger="hover"
+                                            colors="primary:#0000,secondary:#0614AD"
+                                            style="width:36px;height:36px">
+                                        </lord-icon>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#"> 
+                                        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                                        <lord-icon
+                                            src="https://cdn.lordicon.com/wloilxuq.json"
+                                            trigger="hover"
+                                            colors="primary:#000,secondary:#0614AD"
+                                            style="width:36px;height:36px">
+                                        </lord-icon>
+                                        </a>
+                                    </td>
+                                    <td>
+                                        <a href="#">
+                                        <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                                        <lord-icon
+                                            src="https://cdn.lordicon.com/gsqxdxog.json"
+                                            trigger="hover"
+                                            colors="primary:#0000,secondary:#0614AD"
+                                            style="width:36px;height:36px">
+                                        </lord-icon>
+                                        </a>
+                                    </td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </article>
+                </section>
+            </main>
+            <%- include('partials/footer') %>

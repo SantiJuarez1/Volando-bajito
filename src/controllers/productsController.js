@@ -11,6 +11,9 @@ const controller = {
             res.send({ error });
         }
     },
+    admin: (req, res) => {
+        res.render('admin');
+    }
     /* detail: async (req, res) => {
         try {
             const product = await db.Product.findByPk(req.params.id);

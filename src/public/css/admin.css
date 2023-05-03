@@ -1,0 +1,57 @@
+body {
+    background-color: white;
+}
+
+.adminTitle {
+    color: black;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px 0px;
+
+}
+
+.adminForm {
+    display: flex;
+    width: 100%;
+    height: 100px;
+    padding: 20px;
+    margin-bottom: 20px;
+    justify-content: space-between;
+    background-color: #0614AD;
+}
+
+.input {
+    padding-top: -20px;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.submit {
+    background-color: #20BAE6;
+    color: black;
+    padding: 10px;
+    border-radius: 7px;
+}
+
+.aminTable {
+    width: 100%;
+    height: 500px;
+}
+
+.table {
+    width: 100%;
+    height: auto;
+}
+
+th {
+    padding: 10px;
+    border-bottom: 10px solid #0614AD;
+}
+
+.rellenoTable {
+    text-align: center;
+}
+
+td {
+    border-bottom: 1px solid #33333357;
+}

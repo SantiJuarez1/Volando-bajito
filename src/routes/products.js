@@ -9,6 +9,7 @@ const router = express.Router();
 
 //RUTAS
 router.get('/', productsController.list);
+router.get('/admin', productsController.admin);
 /* router.get('/detail/:id', productsController.detail);
 router.get('/add', productsController.add);
 router.post('/', productNewValidator, productsController.create);
