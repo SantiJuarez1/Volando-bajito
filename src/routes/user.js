@@ -2,6 +2,7 @@
 const express = require('express');
 const path = require('path');
 const multer = require('multer');
+const { body } = require('express-validator');
 //modulos internos
 const userController = require('../controllers/userController');
 //configuracion
@@ -23,11 +24,11 @@ const upload = multer({
 }); 
 //VAlIDACIONES PARA DB
 const auth = require('../middlewares/auth'); //si esta logueado tiene acceso a...
-
+const registerValidator = require('../validators/registerValidator');
 
 //RUTAS PARA DB
 router.get('/register', userController.register);
-router.post('/register', /* registerValidator, */ upload.single('avatar') ,userController.create); 
+router.post('/register', upload.single('avatar') , registerValidator, userController.create); 
 router.get('/login', userController.login); 
 router.post('/login', userController.loginProcess); 
 router.get('/', auth, userController.profile);

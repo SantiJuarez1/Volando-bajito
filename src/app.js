@@ -6,9 +6,9 @@ const methodOverride = require('method-override');
 const session = require('express-session');
 const cookies = require('cookie-parser');
 //modulos internos
-/* const products = require('./src/routes/products');
-const admin = require('./routes/admin'); */
+const products = require('./routes/products');
 const userRoutes = require('./routes/user'); 
+/* const admin = require('./routes/admin');  */
 
 const app = express();
 //configurar el Template Engine
@@ -38,9 +38,9 @@ app.use(authentication);
 /* app.use(userLoggedMiddleware); */
 
 //declaracion de rutas
-/* app.use('/', products);
-app.use('/admin', admin); */
+app.use('/', products);
 app.use('/user', userRoutes);
+/* app.use('/admin', admin); */ 
 
 //puerto
 const port = process.env.PORT || 3500;

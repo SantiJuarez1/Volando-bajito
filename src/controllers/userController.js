@@ -11,17 +11,17 @@ const controller = {
         res.render('register');
     },
     create: async (req, res) => {
-        /* const errors = validationResult(req);
+        const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.render('register', { errors: errors.mapped() });
-        }; */
+        };
         try {
             const user = {
                 fullname: req.body.fullname,
                 username: req.body.username,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
-                avatar: req.file.filname ? req.file.filname : 'default-profile.webp'
+                avatar: req.file.filename ? req.file.filename : 'default-profile.webp'
             };
             await db.User.create(user);
             res.redirect('/user/login');

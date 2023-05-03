@@ -11,7 +11,7 @@ const controller = {
             res.send({ error });
         }
     },
-    detail: async (req, res) => {
+    /* detail: async (req, res) => {
         try {
             const product = await db.Product.findByPk(req.params.id);
             //.findOne({ where: {id: req.paramas.id}})
@@ -82,7 +82,7 @@ const controller = {
         } catch (error) {
             return res.send(error);
         }
-    }
+    } */
 }
 
 
