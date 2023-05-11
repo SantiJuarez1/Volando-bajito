@@ -1,0 +1,93 @@
+<%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <section class="sectionForm">
+            <form class="formVuelos" action="#" autocomplete="off">
+                <div class="mainForm">
+                    <div class="select">
+                        <input type="radio" name="tipo" id="tipo1">
+                        <label for="tipo">Ida y Vuelta</label>
+                        <input type="radio" name="tipo" id="tipo2">
+                        <label for="tipo">Solo Ida</label>
+                    </div>
+                    <div class="select2">
+                        <label for="origen">Salgo de</label>
+                        <select name="provincia" id="provincia">
+                            <option value="">- Selecciona -</option>
+                            <option value="">Buenos Aires</option>
+                            <option value="">Mendoza</option>
+                            <option value="">Misiones</option>
+                            <option value="">Bariloche</option>
+                            <option value="">Salta</option>
+                            <option value="">Neuquen</option>
+                        </select>
+                    </div>
+                    <div class="select2">
+                        <label for="destino">Voy a</label>
+                        <select name="provincia" id="provincia">
+                            <option value="">- Selecciona -</option>
+                            <option value="">Buenos Aires</option>
+                            <option value="">Mendoza</option>
+                            <option value="">Misiones</option>
+                            <option value="">Bariloche</option>
+                            <option value="">Salta</option>
+                            <option value="">Neuquen</option>
+                        </select>
+                    </div>
+                    <div class="select3">
+                        <label for="salida">Salida</label>
+                        <input type="date" name="salida" id="salida" placeholder="Ingrese fecha de salida" />
+                    </div>
+                    <div class="select4">
+                        <label for="salida">Regreso</label>
+                        <input type="date" name="salida" id="salida" placeholder="Ingrese fecha de regreso" />
+                    </div>
+                    <div class="select5">
+                        <input type="checkbox" name="notificacion" id="notificacion">
+                        <label for="notificacion">Todavia no tengo fecha definida</label>
+                    </div>
+                    <div class="select3">
+                        <input type="text" name="personas" id="personas"
+                            placeholder="Pasajeros" />
+                    </div>
+                    <div class="select4">
+                        <select name="clase" id="clase">
+                            <option value="">Economica</option>
+                            <option value="">Premium</option>
+                            <option value="">Business</option>
+                            <option value="">Primera</option>
+                        </select>
+                    </div>
+                    <div class="submit-button">
+                        <input type="submit" value="Buscar">
+                    </div>
+                </div>
+            </form>
+        </section>
+        <section class="vuelos">
+            <div class="titulo2">
+                <span>Are you ready?</span>
+                <h2>VUELOS</h2>
+            </div>
+            <div class="vuelosCard-container">
+                <% listDestinos.forEach((vuelos) => { %>
+                <article class="vuelos-cards">
+                    <img src="../images/<%= vuelos.img %>" alt="Mendoza">
+                    <div class="card-descripcion">
+                        <h2 class="tCard2"><%= vuelos.titulo %></h2>
+                        <div class="desde">
+                            <p class="p1">Desde</p>
+                            <p class="p2"><%= vuelos.desde %></p>
+                        </div>
+                        <span class="precio2"><b>$ <%= vuelos.precio %></b></span>
+                        <button class="comprar2">Añadir a carrito</button>
+                    </div>
+                </article>
+                <% }) %>
+            </div>
+        </section>
+        <%- include('partials/tips') %> -->
+    </main>
+    <%- include('partials/footer') %>

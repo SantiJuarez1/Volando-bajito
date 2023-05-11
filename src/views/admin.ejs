@@ -11,12 +11,12 @@
                         <h2 class="adminTitle">Administrador de Productos</h2>
                     
                     <article class="adminForm">
-                        <a class="btnAdd" href="#">
+                        <a class="btnAdd" href="/create">
                             <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
                             <lord-icon
                                 src="https://cdn.lordicon.com/uukerzzv.json"
                                 trigger="hover"
-                                colors="primary:#0000,secondary:#20BAE6"
+                                colors="primary:#ffffff,secondary:#20BAE6"
                                 style="width:60px;height:60px">
                             </lord-icon>
                         </a>
@@ -38,12 +38,13 @@
                                 </tr>
                             </thead>
                             <tbody>
+                                <% products.forEach((product) => {  %>
                                 <tr class="rellenoTable">
-                                    <td>id</td>
-                                    <td>name</td>
-                                    <td>descripcion </td>
+                                    <td><%= product.id %></td>
+                                    <td><%= product.title %></td>
+                                    <td class="modificacion"><%= product.description %></td>
                                     <td>
-                                        <a href="#"> 
+                                        <a href="/detail/<%= product.id %>"> 
                                         <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
                                         <lord-icon
                                             src="https://cdn.lordicon.com/tyounuzx.json"
@@ -54,7 +55,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="#"> 
+                                        <a href="/edit/<%= product.id %>"> 
                                         <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
                                         <lord-icon
                                             src="https://cdn.lordicon.com/wloilxuq.json"
@@ -65,7 +66,7 @@
                                         </a>
                                     </td>
                                     <td>
-                                        <a href="#">
+                                        <a href="/delete/<%= product.id%>">
                                         <script src="https://cdn.lordicon.com/bhenfmcm.js"></script>
                                         <lord-icon
                                             src="https://cdn.lordicon.com/gsqxdxog.json"
@@ -76,6 +77,7 @@
                                         </a>
                                     </td>
                                 </tr>
+                                <% }); %>
                             </tbody>
                         </table>
                     </article>

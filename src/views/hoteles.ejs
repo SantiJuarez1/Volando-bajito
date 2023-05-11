@@ -1,0 +1,40 @@
+<%- include('partials/head') %>
+    </head>
+
+    <body>
+        <%- include('partials/header') %>
+            <main>
+                <div class="containerFormHoteles">
+                </div>
+                <section class="destinos">
+                    <span>Dulces sueños</span>
+                    <h2>Hoteles</h2>
+                    <div class="cards">
+                        <% hoteles.forEach((hoteles)=> { %>
+                            <article class="card">
+                                <img src="../images/<%= hoteles.images[0].name %>" alt="Hotel">
+                                <div class="destino">
+                                    <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                                    <lord-icon class="icono" src="https://cdn.lordicon.com/zzcjjxew.json"
+                                        trigger="hover" colors="primary:#0614ad,secondary:#0614ad"
+                                        style="width:36px;height:36px">
+                                    </lord-icon>
+                                    <h2 class="tCard">
+                                        <%= hoteles.title %>
+                                    </h2>
+                                    <div class="description">
+                                        <p class="subTcard">
+                                            <%= hoteles.description %>
+                                        </p>
+                                    </div>
+                                    <div>
+                                        <span class="recomendado"><b>$<%= hoteles.price %></b> por noche</span>
+                                    </div>
+                                    <button class="comprar3">Añadir a carrito</button>
+                            </article>
+                            <% }) %>   
+                    </div>
+                </section>
+                <%- include('partials/tips') %> 
+            </main>
+            <%- include('partials/footer') %> 

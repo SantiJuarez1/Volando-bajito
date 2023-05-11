@@ -10,7 +10,7 @@ body {
     font-family: 'Roboto Slab', serif;
     background-color: #0A1931;
 }
-
+/* ########### PARTIALS ############## */
 /* Comienzo HEADER  */
 header {
     width: 100%;
@@ -100,6 +100,85 @@ lord-icon{
     cursor: pointer;
 }
 /* Final HEADER */
+/* Comienzo FOOTER */
+footer {
+    background-color: black;
+    display: flex;
+    padding: 20px 20px;
+}
+
+.footer-p {
+    width: 600px;
+}
+
+.footerP {
+    color: white;
+    text-align: center;
+}
+
+.menu {
+    width: 900px;
+}
+
+.menu-container {
+    text-align: center;
+    list-style: none;
+    display: flex;
+    justify-content: space-between;
+}
+
+.menu-container li a {
+    text-decoration: none;
+    color: white;
+}
+
+.menu-container li a:hover {
+    color: #0614AD;
+}
+
+.boton {
+    border: 1px solid #20BAE6;
+    padding: 10px 30px;
+    background-color: #20BAE6;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-left: 100px;
+}
+/* Final FOOTER */
+/* Comienzo TIPS */
+.tipsCard {
+    padding: 40px 20px;
+    text-align: center;
+}
+
+.tips-containers {
+    padding: 40px 20px;
+    width: 100%;
+    display: flex;
+    gap: 20px;
+}
+
+.tips {
+    border-radius: 8px;
+}
+
+.tCard4 {
+    color: white;
+    border-radius: 8px 8px 0px 0px;
+    text-align: center;
+    padding: 5px 15px;
+    border-bottom: solid 1px grey;
+}
+
+.tCard5 {
+    color: #7B7E86;
+    text-align: lcenter;
+    padding: 5px 15px;
+}
+/* final TIPS */
+/* ########### FINAL PARTIALS ############## */
+/* ########### INDEX ############## */
 /* seccion container img */
 .container-img {
     width: 100%;
@@ -136,7 +215,7 @@ lord-icon{
     color: #20BAE6;
 }
 
-.botones2 {
+.botones {
     padding: 30px 1px;
 }
 
@@ -144,18 +223,18 @@ lord-icon{
     border: 1px solid #0614AD;
     padding: 10px 40px;
     background-color: #0614AD;
-    color: #ffffff;
     text-decoration: none;
     border-radius: 50px;
+    color: #ffffff;
 }
 
 .boton2 {
     border: 1px solid #333;
     padding: 10px 40px;
     background-color: #333;
-    color: #ffffff;
     text-decoration: none;
     border-radius: 50px;
+    color: #ffffff;
 }
 /* seccion destinos */
 .destinos {
@@ -184,7 +263,6 @@ h2 {
 .cards {
     margin: 40px 80px;
     max-width: 1200px;
-    text-align: center;
     display: flex;
     flex-wrap: wrap;
     gap: 20px;
@@ -193,16 +271,16 @@ h2 {
 .card {
     display: inline-block;
     margin: 8px;
-    max-width: 300px;
     perspective: 1000;
     text-align: left;
     transition: all 0.3s 0s ease-in;
-    width: 300px;
-    padding-bottom: 20px;
+    max-width: 300px;
+    padding-bottom: 10px;
 }
 
 .card img {
-    max-width: 300px;
+    width: 300px;
+    height: 200px;
     transition: all 0.3;
 }
 
@@ -210,17 +288,16 @@ h2 {
     transform: scale(1.1);
 }
 
-.icono {
-    color: white;
-    border-radius: 32px;
+.valor {
+    color: #20BAE6 ;
+    width: 120px;
     height: 32px;
     padding: 0;
     position: relative;
     right: 0px;
-    width: 32px;
-    bottom: -47px;
-    left: 270px;
-    cursor: pointer;
+    left: 200px;
+    top: -40px;
+    font-size: 26px;
 }
 
 .icono:hover {
@@ -230,7 +307,6 @@ h2 {
 .tCard {
     font-size: 24px;
     font-weight: 400;
-    margin: 0;
     padding: 10px 0px;
 }
 
@@ -286,7 +362,7 @@ h2 {
     padding: 20px;
 }
 
-.user-input-box .input-form {
+.formulario .input-form {
     height: 40px;
     width: 80%;
     border-radius: 7px;
@@ -295,7 +371,8 @@ h2 {
     padding: 0 10px;
 }
 
-button {
+
+/* button {
     font-size: 18px;
     background-color: white;
     border-radius: 5px;
@@ -304,11 +381,11 @@ button {
 
 .buscar {
     color: black;
-}
+} */
 
-button:hover {
+/* button:hover {
     background-color: #0614AD;
-}
+} */
 /* seccion feedbacks */
 .feedbacks {
     width: 100%;
@@ -446,81 +523,9 @@ h5 {
         background-image: url(../../images/cataratas.jpg);
     }
 }
-/* Comienzo FOOTER */
-footer {
-    background-color: black;
-    display: flex;
-    padding: 20px 20px;
-}
-
-.footer-p {
-    width: 600px;
-}
-
-.footerP {
-    color: white;
-    text-align: center;
-}
-
-.menu {
-    width: 900px;
-}
-
-.menu-container {
-    text-align: center;
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-}
-
-.menu-container li a {
-    text-decoration: none;
-    color: white;
-}
-
-.menu-container li a:hover {
-    color: #0614AD;
-}
-
-.boton {
-    border: 1px solid #20BAE6;
-    padding: 10px 30px;
-    background-color: #20BAE6;
-    color: #ffffff;
-    text-decoration: none;
-    border-radius: 50px;
-    margin-left: 100px;
-}
-/* Final FOOTER */
 /* ########### FINAL INDEX ############## */
-/* ########### VUELOS ############## */
-/* seccion sectionForm*/
-.sectionForm {
-    width: 100%;
-    height: 500px;
-    padding-top: 60px;
-    animation: slider 20s ease-in-out infinite;
-    background-size: cover;
-}
 
-@keyframes slider {
-    0% {
-        background-image: url(../../images/paisaje1.jpg);
-    }
-    25% {
-        background-image: url(../../images/paisaje2.jpg);
-    }
-    50% {
-        background-image: url(../../images/paisaje3.jpg);
-    }
-    75% {
-        background-image: url(../../images/paisaje4.jpg);
-    }
-    100% {
-        background-image: url(../../images/paisaje5.jpg);
-    }
-}
-
+/* 
 .formVuelos {
     background: rgba(0, 0, 0, 0.5);
     width: 40%;
@@ -584,94 +589,16 @@ footer {
 .submit-button input:hover {
     background-color: #0614AD;
     color: rgb(255, 255, 255);
-}
-/* seccion vuelos*/
-.vuelos {
-    width: 80%;
-    margin: 0 auto;
-}
+} */
 
-.vuelosCard-container {
-    width: 100%;   
-    display: grid;
-    grid-template-rows: repeat(2, 1fr);
-    grid-template-columns: repeat(3, 1fr);
-    gap: 30px;
-}
-
-.vuelos-cards {
-    cursor: pointer;
-    width: 300px;
-    background-color: white;
-    border-radius: 8px;
-    box-shadow: 0 8px 32px 0 rgba(255, 255, 255, 0.2);
-}
-
-.vuelos-cards img {
-    border-radius: 8px 8px 0px 0px;
-    border-bottom: 10px solid #0A1931;
-}
-
-.card-descripcion {
-    padding-left: 15px;
-    padding-bottom: 10px;
-}
-
-.desde {
-    padding: 20px 0px;
-}
-
-
-/* seccion tips*/
-.tipsVuelos {
-    padding: 40px 20px;
-    text-align: center;
-}
-
-.tips-containers {
-    padding: 40px 20px;
-    width: 100%;
-    display: flex;
-    gap: 20px;
-}
-
-.tips {
-    border-radius: 8px;
-}
-
-.tCard4 {
-    color: white;
-    border-radius: 8px 8px 0px 0px;
-    text-align: center;
-    padding: 5px 15px;
-    border-bottom: solid 1px grey;
-}
-
-.tCard5 {
-    color: #7B7E86;
-    text-align: lcenter;
-    padding: 5px 15px;
-}
-
-.precio2 {
-    position: absolute;
-    background: #0614AD;
-    padding: 10px 20px;
-    text-align: center;
-    font-size: 24px;
-    font-weight: 200;
-    color: #fff;
-    margin-left: 170px;
-    border-radius: 7px;
-    box-shadow: -10px 20px 15px -10px rgba(0, 0, 0, 0.3);
-}
-/* ########### FINAL VUELOS ############## */
 /* ########### HOTELES ############## */
 .containerFormHoteles {
     background-image: url(../../images/hotel-container.png);
     background-size: cover;
     background-position: center;
     padding: 20px;
+    width: 100%;
+    height: 400px;
 }
 
 .formHoteles {
@@ -696,9 +623,35 @@ footer {
 .comprar3:hover {
     background: #0614AD;
 }
-
 /* ########### FINAL HOTELES ############## */
+
 /* ########### PAQUETES ############## */
+.sectionPaquetes{
+    width: 100%;
+    height: 500px;
+    padding-top: 60px;
+    animation: slider 20s ease-in-out infinite;
+    background-size: cover;
+}
+
+@keyframes slider {
+    0% {
+        background-image: url(../../images/paisaje1.jpg);
+    }
+    25% {
+        background-image: url(../../images/paisaje2.jpg);
+    }
+    50% {
+        background-image: url(../../images/paisaje3.jpg);
+    }
+    75% {
+        background-image: url(../../images/paisaje4.jpg);
+    }
+    100% {
+        background-image: url(../../images/paisaje5.jpg);
+    }
+}
+
 .activities {
     width: 80%;
     margin: 0 auto;
@@ -779,7 +732,8 @@ footer {
     box-shadow: -10px 20px 15px -10px rgba(0, 0, 0, 0.3);
 }
 /* ########### FINAL PAQUETES ############## */
-/* ########### PRODUCTOS ############## */
+
+/* ########### DETALLE PRODUCTOS ############## */
 .products {
     width: 100%;
     padding: 20px 40px 0px;
@@ -793,7 +747,7 @@ footer {
     margin-left: 20px;
 }
 
-.containerFormHoteles1 {
+.detail {
     width: 400px;
     height: 440px;
     border-left: 10px solid gray;
@@ -802,13 +756,14 @@ footer {
     margin-top: 40px;
 }
 
-.mainForm {
+.info {
     width: 70%;
+    height: 250px;
     margin: 10px auto;
-}
-
-.select6 {
-    padding: 20px 10px;
+    padding: 10px;
+    color: white;
+    line-height: 2;
+    letter-spacing: 1.5;
 }
 
 .price {
@@ -858,13 +813,14 @@ footer {
     grid-column-end: 4;
 }
 
-.container-botones {
+.container-boton {
+    margin-top: 30px;
     padding: 20px 0px;
 }
 
 .form-submit-button input {
     display: block;
-    width: 80%;
+    width: 70%;
     margin: 10px auto;
     font-size: 20px;
     padding: 10px;
@@ -879,19 +835,7 @@ footer {
     color: rgb(255, 255, 255);
 }
 
-
-
-.excursiones {
-    padding: 20px;
-    list-style: none;
-}
-
-.excursiones li {
-    color: #7B7E86;
-    margin: 15px;
-}
-
-/* ########### FINAL PRODUCTOS ############## */
+/* ########### FINAL DETALLE PRODUCTOS ############## */
 /* ########### CREACION PRODUCTOS ############## */
 .products-title {
     text-align: center;
@@ -924,21 +868,58 @@ footer {
     margin-top: 10px;
 }
 
-.actualizar {
-    margin-left: 180px;
-}
-
-.delete {
-    position: absolute;
-    margin-top: -45px;
-    margin-left: 20px;
-}
-
 .comun-button {
     margin-left: 90px;
 }
-
 /* ########### FINAL CREACION PRODUCTOS ############## */
+/* ########### CONTACTO ############## */
+.contacto {
+    width: 100%;
+    height: 300px;
+    background-image: url(/images/contact_header.jpg);
+    background-repeat: no-repeat;
+}
+.form {
+    width: 100%;
+    display: flex;
+    
+}
+
+#formContacto {
+    background-color: #20BAE6;
+    width: 40%;
+    padding: 20px 30px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 400px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+span {
+    color: white;
+    padding: 10px 0px;
+}
+
+input {
+    width: 80%;
+}
+
+.btn-form {
+    width: 40%;
+    margin-top: 30px ;
+    border: 1px solid #0614AD;
+    padding: 10px 30px;
+    background-color: #0614AD;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+}
+
+/* ########### FINAL CONTACTO ############## */
+
+
+
 /*REPONSIVE PARA +800 header*/
 @media screen and (min-width: 800px) {
     .logo {

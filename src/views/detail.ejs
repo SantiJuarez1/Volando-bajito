@@ -6,46 +6,22 @@
         <%- include('partials/header') %>
             <main>
                 <section class="products">
-                    <h2> Detalle del Producto: <%= product.title %>
-                    </h2>
-                    <div class="containerFormHoteles1">
-                        <div class="mainForm">
-                            <div class="select3">
-                                <label for="salida">Entrada</label>
-                                <input type="date" name="salida" id="salida" placeholder="Ingrese fecha de salida" />
-                            </div>
-                            <div class="select4">
-                                <label for="salida">Salida</label>
-                                <input type="date" name="salida" id="salida" placeholder="Ingrese fecha de regreso" />
-                            </div>
-                            <div class="select6">
-                                <input type="text" name="personas" id="personas" placeholder="Personas" />
-                                <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-                                <lord-icon class="buscador" src="https://cdn.lordicon.com/msoeawqm.json" trigger="hover"
-                                    colors="primary:#ffffff,secondary:#20bae6" style="width:36px;height:36px">
-                                </lord-icon>
-                            </div>
+                    <h2> Detalle del Producto:</h2>
+                    <h2><%= products.title %></h2>
+                    <div class="detail">
+                        <div class="info">
+                            <p><em><%= products.description %></em></p>
                         </div>
-                        <span class="price"><b>$ <%= product.price %> </b></span>
-                        <div class="container-botones">
+                        <span class="price"><b>$ <%= products.price %> </b></span>
+                        <div class="container-boton">
                             <div class="form-submit-button">
                                 <input type="submit" value="Añadir a carrito">
-                            </div>
-                            <div class="form-submit-button">
-                                <form action="/edit/<%= product.id %>" method="get">
-                                    <input type="submit" value="Editar">
-                                </form>
-                            </div>
-                            <div class="form-submit-button">
-                                <form action="/delete/<%= product.id %>?_method=DELETE" method="post">
-                                    <input type="submit" value="Borrar">
-                                </form>
                             </div>
                         </div>
                     </div>
                     <div class="photos">
                         <div class="img-galeria1">
-                            <img src="/images/<%= product.images0 %>" alt="">
+                            <img src="/images/" alt="">
                         </div>
                         <div class="img-galeria2">
                             <img src="/images/detail2.webp" alt="">

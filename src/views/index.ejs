@@ -1,6 +1,5 @@
 <%- include('partials/head') %>
     </head>
-
     <body>
         <%- include('partials/header') %>
             <main>
@@ -9,8 +8,8 @@
                         <h1 class="parte1">ENCUENTRA TU</h1>
                         <h1 class="parte2">DESTINO</h1>
                         <p class="sub-titulo">más experiencias por vivir</p>
-                        <div class="botones2">
-                            <a class="boton1" href="/paquetes">Descubrir</a>
+                        <div class="botones">
+                            <a class="boton1" href="/products/paquetes">Descubrir</a>
                             <a class="boton2" href="/user/register">Registrarse</a>
                         </div>
                     </div>
@@ -20,39 +19,32 @@
                     <h2>DESTINOS</h2>
                     <p class="sub-text"> No pierdas la oportunidad de vivir una de estas experiencias.</p>
                     <div class="cards">
-                        <% products.forEach((product) => {  %>
+                        <% products.forEach((product)=> { %>
                             <article class="card">
-                                <img src="/images/<%= product.images0 %>" alt="">
-                                <div class="destino">
-                                    <a href="/detail/<%= product.id %>">
-                                        <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
-                                        <lord-icon class="icono" src="https://cdn.lordicon.com/udwhdpod.json"
-                                            trigger="hover" colors="primary:#ffff,secondary:#ffff"
-                                            style="width:36px;height:36px">
-                                        </lord-icon>
-                                    </a>
-                                    <h2 class="tCard">
-                                        <%= product.title %>
-                                    </h2>
-                                    <div class="description">
-                                        <p class="subTcard">
-                                            <%= product.description %>
-                                        </p>
-                                    </div>
-                                    <div>
-                                        <span class="recomendado"><b>RECOMENDADO</b></span>
-                                    </div>
+                                <img src="/images/<%= product.images[0].name %>" alt="">
+                                <h2 class="tCard">
+                                    <%= product.title %>
+                                </h2>
+                                <p class="valor"> 
+                                    <strong> $ <%= product.price %> </strong>
+                                </p>
+                                <p class="subTcard">
+                                    <%= product.description %>
+                                </p>
+                                <div>
+                                    <span class="recomendado"><b>RECOMENDADO</b></span>
                                 </div>
+
                             </article>
-                        <% }) %> 
+                            <% }) %>
                     </div>
                 </section>
                 <div class="buscador-container">
                     <div class="buscador-description">
                         <h3 class="waveT">¿ No encontraste lo que buscabas ?</h3>
-                        <form class="user-input-box" action="#" method="GET">
+                        <form class="formulario" action="#" method="GET">
                             <input class="input-form" type="text" name="buscador" placeholder="Quiero ir a..." />
-                            <input type='submit' value="Buscar"></input>
+                            <input class="btn-form" type='submit' value="Buscar"></input>
                         </form>
                     </div>
                 </div>

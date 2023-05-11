@@ -1,4 +1,5 @@
 'use strict';
+const bcrypt = require('bcryptjs');
 
 /** @type {import('sequelize-cli').Migration} */
 module.exports = {
@@ -14,11 +15,11 @@ module.exports = {
     */
     await queryInterface.bulkInsert('users', [
       {
-        fullname: 'Marcia Veron', username: 'marve', email: 'mar@travel.com', password: 'Hola123', avatar: 'avatar2.jpg'
+        fullname: 'Marcia Veron', username: 'marve', email: 'mar@travel.com', password: bcrypt.hashSync('Hola123', 10), avatar: 'avatar2.jpg'
       }, {
-        fullname: 'Santiago Juares', username: 'santi', email: 'santi@travel.com', password: 'Hola678', avatar: 'avatar1.jpg'
+        fullname: 'Santiago Juares', username: 'santi', email: 'santi@travel.com', password: bcrypt.hashSync('Hola678', 10), avatar: 'avatar1.jpg'
       }, {
-      fullname: 'Marcos Gutierrez', username: 'marc', email: 'marc@travel.com', password: 'Chau123', avatar: 'default-profile.webp'
+      fullname: 'Marcos Gutierrez', username: 'marc', email: 'marc@travel.com', password: bcrypt.hashSync('Chau123', 10), avatar: 'default-profile.webp'
       } 
     ], {});
   },

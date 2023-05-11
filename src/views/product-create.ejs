@@ -10,54 +10,31 @@
                         </div>
                     </div>
                     <div class="col-12">
-                        <form action="/" method="POST" enctype="multipart/form-data">
+                        <form class="form" action="/create" method="POST" enctype="multipart/form-data">
                             <div class="product-detail">
                                 <div class="col">
                                     <label for="title" class="form-label">Nombre del producto:</label>
-                                    <input type="text" name="title" placeholder="Ej: Neuquen" class="form-input">
+                                    <input type="text" name="title" placeholder="Ej: Neuquen" id="title">
                                     <% if (locals.errors && locals.errors.title) { %>
                                         <p><%= errors.title.msg %></p>
                                     <% } %>
                                 <div class="col">
                                     <label for="description" class="form-label">Descipción:</label>
-                                    <input type="text" name="description" placeholder="Ingrese una breve descripción" class="form-input">
+                                    <input type="text" name="description" placeholder="Ingrese una breve descripción" id="description">
                                     <% if (locals.errors && locals.errors.description) { %>
                                         <p><%= errors.description.msg %></p>
                                     <% } %>
                                 </div>
                                 <div class="col">
                                     <label for="price" class="form-label">Precio:</label>
-                                    <input type="number" name="price" placeholder="Precio" class="form-input">
+                                    <input type="number" name="price" placeholder="Precio" id="price">
                                     <% if (locals.errors && locals.errors.price) { %>
                                         <p><%= errors.price.msg %></p>
                                     <% } %>
                                 </div>
                                 <div class="col">
-                                    <label class="form-label">Excursiones:</label>
-                                    <input type="text" name="item_1" placeholder="Ingrese una breve descripción" class="form-input">
-                                    <% if (locals.errors && locals.errors.item_1) { %>
-                                        <p><%= errors.item_1.msg %></p>
-                                    <% } %>
-                                    <input type="text" name="item_2" placeholder="Ingrese una breve descripción" class="form-input">
-                                    <% if (locals.errors && locals.errors.item_2) { %>
-                                        <p><%= errors.item_2.msg %></p>
-                                    <% } %>
-                                    <input type="text" name="item_3" placeholder="Ingrese una breve descripción" class="form-input">
-                                    <% if (locals.errors && locals.errors.item_3) { %>
-                                        <p><%= errors.item_3.msg %></p>
-                                    <% } %>
-                                    <input type="text" name="item_4" placeholder="Ingrese una breve descripción" class="form-input">
-                                    <% if (locals.errors && locals.errors.item_4) { %>
-                                        <p><%= errors.item_4.msg %></p>
-                                    <% } %>
-                                    <input type="text" name="item_5" placeholder="Ingrese una breve descripción" class="form-input">
-                                    <% if (locals.errors && locals.errors.item_5) { %>
-                                        <p><%= errors.item_5.msg %></p>
-                                    <% } %>
-                                </div>
-                                <div class="col">
-                                    <label for="images0" class="form-label">Imagen:</label>
-                                    <input type="file" name="images0" class="form-input">
+                                    <label for="image" class="form-label">Imagen:</label>
+                                    <input type="file" name="image" class="form-input">
                                 </div>
                                 <div class="col-12">
                                     <button type="submit" class="comun-button">Crear Producto</button>
@@ -67,4 +44,6 @@
                     </div>
                 </div>
         </main>
+        
         <%- include('partials/footer') %>
+        

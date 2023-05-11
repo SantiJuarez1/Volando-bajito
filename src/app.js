@@ -7,8 +7,8 @@ const session = require('express-session');
 const cookies = require('cookie-parser');
 //modulos internos
 const products = require('./routes/products');
-const userRoutes = require('./routes/user'); 
-/* const admin = require('./routes/admin');  */
+const users = require('./routes/user'); 
+const main = require('./routes/main'); 
 
 const app = express();
 //configurar el Template Engine
@@ -17,12 +17,12 @@ app.set('views', path.join(__dirname, 'views')); //las vistas
 
 //Middlewares Globales
 app.use(cookies());
-app.use(methodOverride('_method'));
 app.use(session({  //incriptacion
     secret: process.env.SECRET || "secret",
     resave: false,
     saveUninitialized: false,
 }));
+app.use(methodOverride('_method'));
 //Middlewares
 app.use(express.json());
 app.use(express.urlencoded({ extended: false })); //permite procesar el formulario
@@ -39,8 +39,8 @@ app.use(authentication);
 
 //declaracion de rutas
 app.use('/', products);
-app.use('/user', userRoutes);
-/* app.use('/admin', admin); */ 
+app.use('/user', users);
+app.use('/products', main); 
 
 //puerto
 const port = process.env.PORT || 3500;

@@ -45,7 +45,7 @@ body {
 
 th {
     padding: 10px;
-    border-bottom: 10px solid #0614AD;
+    border-bottom: 5px solid #0614AD;
 }
 
 .rellenoTable {
@@ -53,5 +53,10 @@ th {
 }
 
 td {
-    border-bottom: 1px solid #33333357;
+    padding: 10px;
+    border-bottom: 1px solid gray;
+}
+
+.modificacion {
+    text-align: left;
 }

@@ -3,16 +3,83 @@ const { ValidationError } = require('sequelize');
 const db = require('../database/models');
 
 const controller = {
-    list: async (req, res) => {
+    index: async (req, res) => {
+        try {
+            const products = await db.Product.findAll({include: ['images', 'category']});
+            res.render('index',  { products }); 
+        } catch (error) {
+            res.send({ error });
+        } 
+    },
+    admin: async (req, res) => {
         try {
             const products = await db.Product.findAll();
-            res.render('index', { products });
+            res.render('admin',  { products });
+        } catch (error) {
+            res.send({ error });
+        } 
+    },
+    detail: async (req, res) => {
+        try {
+            const products = await db.Product.findByPk(req.params.id);
+            res.render('detail',  { products });
         } catch (error) {
             res.send({ error });
         }
     },
-    admin: (req, res) => {
-        res.render('admin');
+    add: (req, res) => {
+        res.render('product-create');
+    },
+    create: async (req, res) =>{
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.render('product-create', { errors: errors.mapped() });
+        }
+        try {
+            const newProduct = {
+                title: req.body.title,
+                description: req.body.description,
+                price: req.body.price,
+                image: req.file.filename ? req.file.filename : 'product-default.jpg'
+            };
+            await db.Product.create(newProduct);
+            return res.redirect('/');
+        } catch (error) {
+            return res.send({error});
+        }
+    },
+    edit: async (req, res) => {
+        try {
+            const product = await db.Product.findByPk(req.params.id);
+            res.render('product-edit', { Product: product });
+        } catch (error) {
+            return res.send({ error });
+        }
+    },
+    update: async (req, res) => {
+        const errors = validationResult(req);
+        if (!errors.isEmpty()) {
+            return res.render('product-edit', { errors: errors.mapped() });
+        }
+        try {
+            const product = {
+                title: req.body.title,
+                description: req.body.description,
+                price: req.body.price
+            };
+            await db.Product.update(product, { where: { id: req.params.id } });
+            return res.redirect('/');
+        } catch (error) {
+            return res.send({ error });
+        }
+    },
+    destroy: async (req, res) => {
+        try {
+            await db.Product.destroy({ where: { id: req.params.id } });
+            res.redirect('/admin');
+        } catch (error) {
+            return res.send(error);
+        }
     }
     /* detail: async (req, res) => {
         try {

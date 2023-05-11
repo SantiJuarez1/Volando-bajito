@@ -28,7 +28,7 @@ const registerValidator = require('../validators/registerValidator');
 
 //RUTAS PARA DB
 router.get('/register', userController.register);
-router.post('/register', upload.single('avatar') , registerValidator, userController.create); 
+router.post('/register', upload.single('avatar'), registerValidator, userController.create); 
 router.get('/login', userController.login); 
 router.post('/login', userController.loginProcess); 
 router.get('/', auth, userController.profile);

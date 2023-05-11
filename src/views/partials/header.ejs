@@ -1,7 +1,7 @@
 <header>
-    <div href="#" class="logo">
+    <a href="/" class="logo">
         <img src="/images/logo.png" alt="" class="logo">
-    </div>
+    </a>
     <input type="checkbox" id="check">
     <label for="check" class="bar-btn">
         <i class="fa fa-bars burger"></i>
@@ -9,7 +9,7 @@
     <nav>
         <ul>
             <li>
-                <a href="/vuelos">
+                <a href="/">
                     <div class="icon">
                         <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
                         <lord-icon src="https://cdn.lordicon.com/gqzfzudq.json" trigger="hover"
@@ -19,7 +19,7 @@
                 </a>
             </li>
             <li>
-                <a href="/hoteles">
+                <a href="/products/hotel">
                     <div class="icon">
                         <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
                         <lord-icon src="https://cdn.lordicon.com/xxduqotz.json" trigger="hover"
@@ -29,7 +29,7 @@
                 </a>
             </li>
             <li>
-                <a href="/paquetes">
+                <a href="/products/activity">
                     <div class="icon">
                         <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
                         <lord-icon src="https://cdn.lordicon.com/fhtaantg.json" trigger="hover"
@@ -39,25 +39,39 @@
                 </a>
             </li>
             <li>
-                <a href="#">
+                <a href="/products/contact">
                     <div class="icon">
                         <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
                         <lord-icon src="https://cdn.lordicon.com/uukerzzv.json" trigger="hover"
                             colors="primary:#ffffff,secondary:#ffffff" style="width:60px;height:60px">
                         </lord-icon>
-                    </div> Nosotros
+                    </div> Contacto
                 </a>
             </li>
+            <% if (locals.session) { %>
+            <li>
+                <a href="/products/admin">
+                    <div class="icon">
+                        <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
+                        <lord-icon src="https://cdn.lordicon.com/sbiheqdr.json" trigger="hover"
+                            colors="primary:#ffffff,secondary:#ffffff" style="width:60px;height:60px">
+                        </lord-icon>
+                    </div> Admin
+                </a>
+            </li>
+            <% } %>
         </ul>
     </nav>
     <div class="botones-nav">
         <a class="login" href="/user/login">Login In</a>
     </div>
     <div class="boton-carrito">
+        <a href="/carrito">
         <script src="https://cdn.lordicon.com/ritcuqlt.js"></script>
             <lord-icon src="https://cdn.lordicon.com/dnoiydox.json" trigger="hover"
                 colors="primary:#ffffff,secondary:#ffffff" style="width:80px;height:80px">
             </lord-icon>
+        </a>
     </div>
 
 </header>

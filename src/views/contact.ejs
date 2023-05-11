@@ -1,0 +1,47 @@
+<%- include('partials/head') %>
+</head>
+<body>
+    <%- include('partials/header') %>
+    <main>
+        <div class="contacto">
+        </div>
+        
+            <div class="titulo2">
+                <span>¿Todavia tenes dudas?</span>
+                <h2>CONTACTO</h2>
+            </div>
+            <section class="form">
+                <form id="formContacto" action="">
+                    <label id="nombre"></label>
+                        <span>
+                            NOMBRE
+                        </span>
+                        <input type="text" name="nombre">
+                    <label id="email"></label>
+                        <span>
+                            EMAIL
+                        </span>
+                        <input type="text" name="email">
+                    <label id="asunto"></label>
+                        <span>
+                            ASUNTO
+                        </span>
+                        <input type="text" name="asunto">
+                    <label id="telefono"></label>
+                        <span>
+                            TELEFONO
+                        </span>
+                        <input type="text" name="telefono">
+                    <label id="consulta"></label>
+                        <span>
+                            CONSULTA
+                        </span>
+                        <textarea type="text" name="consulta"></textarea>
+
+                    <button class="btn-form" type="submit">ENVIAR</button>
+                </form>
+
+            </section>
+        
+    </main>
+    <%- include('partials/footer') %>
