@@ -70,26 +70,26 @@ hacer menos:  no actualizar/modificar tareas del tablero de trello
 
 Retro 7 
 
-Seguir haciendo: 
+Seguir haciendo: cumplir con los objetivos del proyecto
 
-empezar a hacer: 
+empezar a hacer: actualizar al grupo con el progreso diario 
 
-Dejar de hacer: 
+Dejar de hacer: -
 
-hacer mas: 
+hacer mas: establecer objetivos semanales
 
-hacer menos:  
+hacer menos:  -
 
 <--------------------------------------------------------------------------------------------------->
 
 Retro 8 
 
-Seguir haciendo: 
+Seguir haciendo: organizar y planificar los objetivos del proyecto
 
-empezar a hacer: 
+empezar a hacer: linea de tiempo final 
 
-Dejar de hacer: 
+Dejar de hacer: -
 
-hacer mas: 
+hacer mas: feedback entre integrantes del grupo
 
-hacer menos:  
+hacer menos: - 
