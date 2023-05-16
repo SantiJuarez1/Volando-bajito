@@ -1,36 +1,31 @@
 <%- include('partials/head') %>
-
     </head>
 
     <body>
         <%- include('partials/header') %>
             <main>
-                <section class="products">
-                    <h2> Detalle del Producto:</h2>
-                    <h2><%= products.title %></h2>
-                    <div class="detail">
-                        <div class="info">
-                            <p><em><%= products.description %></em></p>
-                        </div>
-                        <span class="price"><b>$ <%= products.price %> </b></span>
-                        <div class="container-boton">
-                            <div class="form-submit-button">
-                                <input type="submit" value="Añadir a carrito">
-                            </div>
-                        </div>
-                    </div>
+                <h2 class="detailProduct"> Detalle del Producto:</h2>
+                <h2 class="detailProduct">
+                    <%= products.title %>
+                </h2>
+                <article class="detalles">
                     <div class="photos">
-                        <div class="img-galeria1">
-                            <img src="/images/" alt="">
-                        </div>
-                        <div class="img-galeria2">
-                            <img src="/images/detail2.webp" alt="">
-                        </div>
-                        <div class="img-galeria3">
-                            <img src="/images/detail1.avif" alt="">
-                        </div>
+                        <img class="img-1" src="/images/<%= products.images[0].name %>" alt="">
+                        <img class="img-2" src="/images/detail2.webp" alt="">
+                        <img class="img-3" src="/images/detail1.avif" alt="">
                     </div>
-                </section>
+                    <div class="info">
+                        <p>
+                            <em>
+                                <%= products.description %>
+                            </em>
+                        </p>
+                        <br>
+                        <br>
+                        <span class="price"><b>$ <%= products.price %> </b></span>
+                    </div>
+                </article>
+
                 <%- include('partials/tips') %>
             </main>
             <%- include('partials/footer') %>

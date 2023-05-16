@@ -1,47 +1,77 @@
 <%- include('partials/head') %>
-</head>
-<body>
-    <%- include('partials/header') %>
-    <main>
-        <div class="contacto">
-        </div>
-        
-            <div class="titulo2">
-                <span>¿Todavia tenes dudas?</span>
-                <h2>CONTACTO</h2>
-            </div>
-            <section class="form">
-                <form id="formContacto" action="">
-                    <label id="nombre"></label>
-                        <span>
-                            NOMBRE
-                        </span>
-                        <input type="text" name="nombre">
-                    <label id="email"></label>
-                        <span>
-                            EMAIL
-                        </span>
-                        <input type="text" name="email">
-                    <label id="asunto"></label>
-                        <span>
-                            ASUNTO
-                        </span>
-                        <input type="text" name="asunto">
-                    <label id="telefono"></label>
-                        <span>
-                            TELEFONO
-                        </span>
-                        <input type="text" name="telefono">
-                    <label id="consulta"></label>
-                        <span>
-                            CONSULTA
-                        </span>
-                        <textarea type="text" name="consulta"></textarea>
+    </head>
 
-                    <button class="btn-form" type="submit">ENVIAR</button>
-                </form>
+    <body>
+        <%- include('partials/header') %>
+            <main>
+                <div class="contacto">
+                </div>
+                <div class="titulo2">
+                    <span>¿Todavia tenes dudas?</span>
+                    <h2>CONTACTO</h2>
+                </div>
+                <section class="contactos">
+                    <div class="contactoForm">
+                        <form action="/products/contact" class="formulario" autocomplete="off" method="post">
 
-            </section>
-        
-    </main>
-    <%- include('partials/footer') %>
+                            <div class="form-box">
+                                <input type="text" name="name" class="formulario__input" placeholder=" " required>
+                                <label for="name" class="formulario__label">Nombre</label>
+                                <span class="formulario__line"></span>
+                                <div class="register-error-message">
+                                    <% if (locals.errors?.name) { %>
+                                        <strong>
+                                            <%= errors.name.msg %>
+                                        </strong>
+                                        <% } %>
+                                </div>
+                            </div>
+
+                            <div class="form-box">
+                                <input type="text" name="email" class="formulario__input" placeholder=" ">
+                                <label for="email" class="formulario__label">E-Mail</label>
+                                <span class="formulario__line"></span>
+                                <div class="register-error-message">
+                                    <% if (locals.errors?.email) { %>
+                                        <strong>
+                                            <%= errors.email.msg %>
+                                        </strong>
+                                        <% } %>
+                                </div>
+                            </div>
+
+                            <div class="form-box">
+                                <input type="text" name="asunto" class="formulario__input" placeholder=" ">
+                                <label for="asunto" class="formulario__label">Asunto</label>
+                                <span class="formulario__line"></span>
+                                <div class="register-error-message">
+                                    <% if (locals.errors?.asunto) { %>
+                                        <strong>
+                                            <%= errors.asunto.msg %>
+                                        </strong>
+                                        <% } %>
+                                </div>
+                            </div>
+
+                            <div class="form-box">
+                                <input type="text" name="telefono" class="formulario__input" placeholder=" ">
+                                <label for="telefono" class="formulario__label">Telefono</label>
+                                <span class="formulario__line"></span>
+                                <div class="register-error-message">
+                                    <% if (locals.errors?.telefono) { %>
+                                        <strong>
+                                            <%= errors.telefono.msg %>
+                                        </strong>
+                                        <% } %>
+                                </div>
+                            </div>
+                            <div class="form-box">
+                                <label for="Consulta" class="label">Consulta</label>
+                                <textarea type="text" name="consulta"></textarea>
+                            </div>
+                            <button class="btn-form" type="submit">ENVIAR</button>
+                        </form>
+                    </div>
+                </section>
+            </main>
+            <%- include('partials/footer') %>

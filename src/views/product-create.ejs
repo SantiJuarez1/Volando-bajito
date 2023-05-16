@@ -1,49 +1,54 @@
 <%- include('partials/head') %>
     </head>
+
     <body>
-        <main>
-            <%- include('partials/header') %>
-                <div class="container products-wrapper">
-                    <div class="row">
-                        <div class="col-12">
-                            <h2 class="products-title">Formulario de creación de productos</h2>
-                        </div>
-                    </div>
-                    <div class="col-12">
-                        <form class="form" action="/create" method="POST" enctype="multipart/form-data">
-                            <div class="product-detail">
-                                <div class="col">
-                                    <label for="title" class="form-label">Nombre del producto:</label>
-                                    <input type="text" name="title" placeholder="Ej: Neuquen" id="title">
-                                    <% if (locals.errors && locals.errors.title) { %>
-                                        <p><%= errors.title.msg %></p>
+        <%- include('partials/header') %>
+            <main>
+                <h2 class="detailProduct">Formulario de creación de productos</h2>
+                <div class="create">
+                    <img class="img-create" src="/images/llama.jpg" alt="Destinos de la Argentina">
+                    <form class="formulario3" action="/create" method="POST" enctype="multipart/form-data">
+                        <div class="form-box">
+                            <input type="text" name="title" placeholder=" " class="formulario__input2">
+                            <label for="title" class="formulario__label2">Nombre del producto:</label>
+                            <div class="register-error-message">
+                                <% if (locals.errors && locals.errors.title) { %>
+                                    <p>
+                                        <%= errors.title.msg %>
+                                    </p>
                                     <% } %>
-                                <div class="col">
-                                    <label for="description" class="form-label">Descipción:</label>
-                                    <input type="text" name="description" placeholder="Ingrese una breve descripción" id="description">
-                                    <% if (locals.errors && locals.errors.description) { %>
-                                        <p><%= errors.description.msg %></p>
-                                    <% } %>
-                                </div>
-                                <div class="col">
-                                    <label for="price" class="form-label">Precio:</label>
-                                    <input type="number" name="price" placeholder="Precio" id="price">
-                                    <% if (locals.errors && locals.errors.price) { %>
-                                        <p><%= errors.price.msg %></p>
-                                    <% } %>
-                                </div>
-                                <div class="col">
-                                    <label for="image" class="form-label">Imagen:</label>
-                                    <input type="file" name="image" class="form-input">
-                                </div>
-                                <div class="col-12">
-                                    <button type="submit" class="comun-button">Crear Producto</button>
-                                </div>
                             </div>
-                        </form>
-                    </div>
-                </div>
-        </main>
+                        </div>
+                        <div class="form-box">
+                            <input type="text" name="description" placeholder=" " class="formulario__input2">
+                            <label for="description" class="formulario__label2">Descipción:</label>
+                            <div class="register-error-message">
+                                <% if (locals.errors && locals.errors.description) { %>
+                                    <p>
+                                        <%= errors.description.msg %>
+                                    </p>
+                                    <% } %>
+                            </div>
+                        </div>
+                        <div class="form-box">
+                            <input type="number" name="price" placeholder=" " class="formulario__input2">
+                            <label for="price" class="formulario__label2">Precio:</label>
+                            <div class="register-error-message">
+                                <% if (locals.errors && locals.errors.price) { %>
+                                    <p>
+                                        <%= errors.price.msg %>
+                                    </p>
+                                    <% } %>
+                            </div>
+                        </div>
+                        <div class="form-box">
+                            <label for="image" class="label2">Imagen:</label>
+                            <input type="file" name="image" class="formulario__input2">
+                        </div>
+                        <button class="btn-form" type="submit">CREAR</button>
+                    </form>
+                
         
-        <%- include('partials/footer') %>
-        
+            </main>
+
+            <%- include('partials/footer') %>

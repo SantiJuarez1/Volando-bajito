@@ -5,7 +5,9 @@ const db = require('../database/models');
 const controller = {
     index: async (req, res) => {
         try {
-            const products = await db.Product.findAll({include: ['images', 'category']});
+            const products = await db.Product.findAll({include: ['images', 'category'], where: {product_categories_id : 1}
+                
+            });
             res.render('index',  { products }); 
         } catch (error) {
             res.send({ error });
@@ -21,7 +23,7 @@ const controller = {
     },
     detail: async (req, res) => {
         try {
-            const products = await db.Product.findByPk(req.params.id);
+            const products = await db.Product.findByPk(req.params.id, {include: ['images', 'category']});
             res.render('detail',  { products });
         } catch (error) {
             res.send({ error });
@@ -50,7 +52,7 @@ const controller = {
     },
     edit: async (req, res) => {
         try {
-            const product = await db.Product.findByPk(req.params.id);
+            const product = await db.Product.findByPk(req.params.id, {include: ['images', 'category']});
             res.render('product-edit', { Product: product });
         } catch (error) {
             return res.send({ error });

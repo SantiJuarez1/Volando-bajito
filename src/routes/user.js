@@ -23,15 +23,16 @@ const upload = multer({
     storage
 }); 
 //VAlIDACIONES PARA DB
-const auth = require('../middlewares/auth'); //si esta logueado tiene acceso a...
+const authMiddleware = require('../middlewares/authMiddleware'); //si esta logueado tiene acceso a...
 const registerValidator = require('../validators/registerValidator');
+const guestMiddleware = require('../middlewares/guestMiddleware')
 
 //RUTAS PARA DB
-router.get('/register', userController.register);
+router.get('/register', guestMiddleware, userController.register);
 router.post('/register', upload.single('avatar'), registerValidator, userController.create); 
 router.get('/login', userController.login); 
-router.post('/login', userController.loginProcess); 
-router.get('/', auth, userController.profile);
+router.post('/login', guestMiddleware, userController.loginProcess); 
+router.get('/', authMiddleware, userController.profile);
 router.get('/logout', userController.logout); 
 
 //VAlIDACIONES PARA JSON

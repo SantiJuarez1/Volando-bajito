@@ -30,12 +30,12 @@ app.use(express.static(path.join(__dirname, 'public'))) //archivos estaticos
 
 //middlewares
 const logMiddleware = require('./middlewares/logMiddleware');
-const authentication = require('./middlewares/authentication');
-/* const userLoggedMiddleware = require('./middlewares/userLoggedMiddleware'); */
+const authenticationMiddleware = require('./middlewares/authenticationMiddleware');
+
 
 app.use(logMiddleware);
-app.use(authentication);
-/* app.use(userLoggedMiddleware); */
+app.use(authenticationMiddleware);
+
 
 //declaracion de rutas
 app.use('/', products);

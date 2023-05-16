@@ -1,84 +1,75 @@
 <%-include('partials/head') %>
-    <link rel="stylesheet" href="/css/login.css">
-    </head>
+</head>
 
-    <body>
-        <%- include('partials/header') %>
-            <main>
-                <section class="form">
-                    <div class="logo-container">
-                        <img src="/images/logo.png" alt="Logo Volando Bajito">
+<body>
+    <%- include('partials/header') %>
+
+    <main>
+        <section class="registro">
+            <div class="logo-container">
+                <img src="/images/logo.png" alt="Logo Volando Bajito">
+            </div>
+            <form action="/user/register" class="formulario" autocomplete="off" method="post" enctype="multipart/form-data">
+                <h1 class="formulario__titulo">Crea tu cuenta</h1>
+
+                <div class="form-box">
+                    <input type="text" name="fullname" class="formulario__input" placeholder=" ">
+                    <label for="fullname" class="formulario__label">Nombre y Apellido</label>
+                    <div class="register-error-message">
+                        <% if (locals.errors?.fullname) { %>
+                            <strong>
+                                <%= errors.fullname.msg %>
+                            </strong>
+                            <% } %>
                     </div>
-                    <div class="container-form">
-                        <h1 class="title">Crea tu cuenta</h1>
-                        <form action="/user/register" autocomplete="off" method="POST" enctype="multipart/form-data">
-                            <div class="main-user-information">
-                                <div class="user-input-box">
-                                    <label for="fullname">Nombre y apellido</label>
-                                    <input class="input-form" type="text" name="fullname" id="fullname"
-                                        placeholder="Ingrese nombre completo" />
-                                    <div class="register-error-message">
-                                        <% if (locals.errors?.fullname) { %>
-                                            <strong>
-                                                <%= errors.fullname.msg %>
-                                            </strong>
-                                            <% } %>
-                                    </div>
-                                </div>
-                                <div class="user-input-box">
-                                    <label for="username">Usuario</label>
-                                    <input class="input-form" type="text" name="username" id="username"
-                                        placeholder="Ingrese nombre de usuario deseado" />
-                                    <div class="register-error-message">
-                                        <% if (locals.errors?.username) { %>
-                                            <strong>
-                                                <%= errors.username.msg %>
-                                            </strong>
-                                            <% } %>
-                                    </div>
-                                </div>
-                                <div class="user-input-box">
-                                    <label for="email">E-Mail</label>
-                                    <input class="input-form" type="text" name="email" id="email"
-                                        placeholder="Ingrese su E-Mail" />
-                                    <div class="register-error-message">
-                                        <% if (locals.errors?.email) { %>
-                                            <strong>
-                                                <%= errors.email.msg %>
-                                            </strong>
-                                            <% } %>
-                                    </div>
-                                </div>
-                                <div class="user-input-box">
-                                    <label for="password">Contraseña</label>
-                                    <input class="input-form" type="password" name="password" id="password"
-                                        placeholder="Ingrese su contraseña" />
-                                    <div class="register-error-message">
-                                        <% if (locals.errors?.password) { %>
-                                            <strong>
-                                                <%= errors.password.msg %>
-                                            </strong>
-                                            <% } %>
-                                    </div>
-                                </div>
-                                <div class="user-input-box">
-                                    <label for="avatar">Avatar</label>
-                                    <input class="input-form" type="file" name="avatar" id="avatar" />
-                                </div>
-                                <div class="email-notifications-box">
-                                    <input type="checkbox" name="notifications" id="notifications">
-                                    <label for="notifications">Deseo recibir novedades y ofertas por E-Mail</label>
-                                </div>
-                                <div class="form-submit-button">
-                                    <input type="submit" name="submit" id="submit">
-                                </div>
-                                <div class="user-input-box">
-                                    <label for="username">¿Ya estas registrado?</label>
-                                    <a href="/login">Ingresa a tu cuenta</a>
-                                </div>
-                            </div>
-                        </form>
+                </div>
+
+                <div class="form-box">
+                    <input type="text" name="username" class="formulario__input" placeholder=" ">
+                    <label for="username" class="formulario__label">Usuario</label>
+                    <div class="register-error-message">
+                        <% if (locals.errors?.username) { %>
+                            <strong>
+                                <%= errors.username.msg %>
+                            </strong>
+                            <% } %>
                     </div>
-                </section>
-            </main>
-            <%- include('partials/footer') %>
+                </div>
+
+                <div class="form-box">
+                    <input type="text" name="email" class="formulario__input" placeholder=" ">
+                    <label for="email" class="formulario__label">E-Mail</label>
+                    <div class="register-error-message">
+                        <% if (locals.errors?.email) { %>
+                            <strong>
+                                <%= errors.email.msg %>
+                            </strong>
+                            <% } %>
+                    </div>
+                </div>
+
+
+                <div class="form-box">
+                    <input type="password" name="password" class="formulario__input" placeholder=" ">
+                    <label for="password" class="formulario__label">Contraseña</label>
+                    <div class="register-error-message">
+                        <% if (locals.errors?.password) { %>
+                            <strong>
+                                <%= errors.password.msg %>
+                            </strong>
+                            <% } %>
+                    </div>
+                </div>
+                <div class="form-box">
+                    <label for="avatar" class="label">Avatar</label>
+                    <input type="file" name="avatar" class="formulario__input" placeholder=" ">
+                </div>
+                <button class="btn-form" type="submit">ENVIAR</button>
+                <div class="preguntar">
+                    <p class="pregunta">¿Ya estas registrado?</p>
+                    <a class="ingresar" href="/user/login">Ingresa a tu cuenta</a>
+                </div> 
+            </form>
+        </section> 
+    </main>
+    <%- include('partials/footer') %>

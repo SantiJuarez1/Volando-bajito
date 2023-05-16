@@ -10,21 +10,44 @@ const controller = {
     register: (req, res) => {
         res.render('register');
     },
+
     create: async (req, res) => {
         const errors = validationResult(req);
         if (!errors.isEmpty()) {
             return res.render('register', { errors: errors.mapped() });
         };
+
+        const userInDB = await db.User.findOne({
+            include: ['role'],
+            where: {
+                email: req.body.email
+            }
+        });
+        if(userInDB){
+            return res.render('register', {
+                errors: {
+                    email: {
+                        msg: 'Este email ya esta registrado'
+                    }
+                },
+                oldData: req.body
+            });
+        }
+
         try {
             const user = {
                 fullname: req.body.fullname,
                 username: req.body.username,
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
-                avatar: req.file.filename ? req.file.filename : 'default-profile.webp'
+                avatar: req.file.filename ? req.file.filename : 'default-profile.webp',
+                role: 2
             };
             await db.User.create(user);
             res.redirect('/user/login');
+
+            
+
         } catch (error) {
             res.send(error);
         }
@@ -46,24 +69,31 @@ const controller = {
             if (!bcrypt.compareSync(req.body.password, user.password)) {
                 return res.render('login', { errors: [{ msg: "Credenciales invalidas" }] });
             }
+
+            if(req.body.remember_me) {
+                res.cookie('recordame', req.body.email, { maxAge: (1000 * 60) * 2 })
+            }
             //variable de session
             req.session.user = {
                 id: user.id,
                 email: user.email,
                 role: user.role.name,
                 fullname: user.fullname,
-                avatar: user.avatar
+                avatar: user.avatar,
+                role: user.role
             };
+
             res.redirect('/user'); //re dirije a perfil
         } catch (error) {
             res.send(error);
         }
     },
     profile: (req, res) => {
-        return res.render('profile');
+        return res.render('profile', { user: req.session.user });
     },
     logout: (req, res) => {
-        delete req.session.user;
+        res.clearCookie('userEmail'); //destruir cookie
+        req.session.destroy();
         return res.redirect('/')
     }
 };

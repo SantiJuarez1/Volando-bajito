@@ -1,13 +1,13 @@
 // PARA DB
 
-function auth(req, res, next) {
+function authMiddleware(req, res, next) {
     if(!req.session.user) {
         return res.redirect('/user/login');
     }
     next();
 }
 
-module.exports = auth;
+module.exports = authMiddleware;
 
 /* PARA JSON
 function auth(req, res, next) {

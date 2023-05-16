@@ -44,7 +44,7 @@ module.exports = {
       }, {
         title: 'Aconcagua - Mendoza', description: 'Esta área es conocida internacionalmente por el cerro más alto del hemisferio occidental, con 6962m. Protege el sector de la cordillera de los Andes donde alcanza la máxima altura de América, con numerosas cumbres que superan los 5.000m', price: '3.500'
       }, {
-        title: 'Parque Nacional Talampaya - La Rioja', description: 'Es un lago de origen glaciar, de allí sus aguas de intenso azul cristalino. Posee una superficie de 557 km² y se sitúa a una altitud de unos 700 metros sobre el nivel del mar. Se destaca por su profundidad y sus siete ramificaciones o brazos: Campanario, de la Tristeza, Blest, Machete, del Rincón, Última Esperanza y Huemul.', price: '6.800'
+        title: 'Parque Nacional Nahuel Huapi - Rio Negro', description: 'Es un lago de origen glaciar, de allí sus aguas de intenso azul cristalino. Posee una superficie de 557 km² y se sitúa a una altitud de unos 700 metros sobre el nivel del mar. Se destaca por su profundidad y sus siete ramificaciones o brazos: Campanario, de la Tristeza, Blest, Machete, del Rincón, Última Esperanza y Huemul.', price: '6.800'
       }, {
         title: 'Buenos Aires Centro', description: 'Ofrece entornos naturales únicos y sustentables,experiencias de turismo comunitario en pequeños poblados, destinos accesibles distinguidos, gastronomía de excelencia y un legado histórico y cultural vinculado a la inmigración y a la tradición rural que la convierten en un lugar único e icónico para residentes locales y extranjeros.', price: '3.200'
       }, {
@@ -52,7 +52,6 @@ module.exports = {
       }, {
         title: 'Parque Nacional Talampaya - La Rioja', description: 'En la región centro-oeste de la provincia de La Rioja, el área conserva importantes riquezas geológicas y paleontológicas pero también una muestra representativa de la ecorregión del Monte de Sierras y Bolsones con sus plantas y animales.', price: '5.600'
       }
-
     ], {});
   },
 

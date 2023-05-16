@@ -5,25 +5,25 @@
     <main>
         <div class="sectionPaquetes">
         </div>
-        <section class="activities">
-            <div class="titulo2">
+        <section class="destinos">
+            
                 <span>Are you ready?</span>
                 <h2>ACTIVIDADES</h2>
-            </div>
             <div class="container-cards">
                 <% activity.forEach((activity)=> { %>
                 <article class="card-actividades">
-                    <img src="../images/<%= activity.images[0].name %>" alt="">
+                    <img src="../images/<%= activity.images[0].name %>" alt="Excursiones">
                     <div class="destiny">
                         <h2 class="tCard2">
                             <%= activity.title %>
                         </h2>
-                        <p class="subTcard2">
+                        <p class="subTcard3">
                             <%= activity.description %>
                         </p>
-                        <div class="description2">
-                            <span class="precio"><b>$<%= activity.price %></b></span>
+                        <div class="descripcion">
                             <button class="comprar">Añadir a carrito</button>
+                            <span class="precio animate__animated animate__flash animate__infinite"><b>$<%= activity.price %></b></span>
+                            
                         </div>  
                     </div>
                 </article>
