@@ -5,9 +5,9 @@
 
 -Publico Objetivo: jovenes de 18 a 35 años
 
--Integrantes: Emiliano Rodriguez, Gino Lencina, Santiago Juares, Franco Malti, Marcia Veron
+-Integrantes: Santiago Juarez y Marcia Veron
 
--Referentes:
+-Sitios Referentes:
 
 https://tainotour.com
 
@@ -21,6 +21,10 @@ https://www.buenas-vibras.com.ar
 
 Estas plataformas nos sirvieron para poder organizar nuestro sitio, la interaccion con el usuario y como vender el producto
 
-Trello:
+Link a tablero de Trello:
 
 https://trello.com/b/WEqvjt6M/volando-bajito
+
+Link al dashboard del proyecto:
+
+https://github.com/SantiJuarez1/Dashboard-VolandoBajito
