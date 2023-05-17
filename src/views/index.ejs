@@ -18,7 +18,7 @@
                     <span>Experiencias</span>
                     <h2>DESTINOS</h2>
                     <p class="sub-text"> No pierdas la oportunidad de vivir una de estas experiencias.</p>
-                    <div class="cards">
+                    <div class="cards" id="listaProductos">
                         <% products.forEach((product)=> { %>
                             <article class="card">
                                 <img src="/images/<%= product.images[0].name %>" alt="Destino">
@@ -32,9 +32,9 @@
                                     <%= product.description %>
                                 </p>
                                 <div>
-                                    <span class="recomendado animate__animated animate__flash animate__infinite"><b>RECOMENDADO</b></span>
+                                    <span class="recomendado animate__animated animate__flash animate__slower animate__infinite "><b>RECOMENDADO</b></span>
                                 </div>
-                                <button class="comprar3">Añadir a carrito</button>
+                                <button class="comprar3" data-id="<%= product.id %>">Añadir</button>
                             </article>
                             <% }) %>
                     </div>
@@ -136,3 +136,4 @@
                 </section>
             </main>
             <%- include('partials/footer') %>
+        

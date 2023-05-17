@@ -9,7 +9,7 @@
             
                 <span>Are you ready?</span>
                 <h2>ACTIVIDADES</h2>
-            <div class="container-cards">
+            <div class="container-cards" id="listaProductos">
                 <% activity.forEach((activity)=> { %>
                 <article class="card-actividades">
                     <img src="../images/<%= activity.images[0].name %>" alt="Excursiones">
@@ -21,8 +21,8 @@
                             <%= activity.description %>
                         </p>
                         <div class="descripcion">
-                            <button class="comprar">Añadir a carrito</button>
-                            <span class="precio animate__animated animate__flash animate__infinite"><b>$<%= activity.price %></b></span>
+                            <button class="comprar3" data-id="<%= activity.id %>">Añadir</button>
+                            <span class="precio animate__animated animate__flash animate__slower animate__infinite"><b>$<%= activity.price %></b></span>
                             
                         </div>  
                     </div>

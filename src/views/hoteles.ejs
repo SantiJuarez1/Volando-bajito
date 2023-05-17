@@ -9,7 +9,7 @@
                 <section class="destinos">
                     <span>Dulces sueños</span>
                     <h2>Hoteles</h2>
-                    <div class="cards">
+                    <div class="cards" id="listaProductos">
                         <% hoteles.forEach((hoteles)=> { %>
                             <article class="card">
                                 <img src="../images/<%= hoteles.images[0].name %>" alt="Hotel">
@@ -21,9 +21,9 @@
                                         <%= hoteles.description %>
                                     </p>
                                     <div>
-                                        <span class="recomendado2 animate__animated animate__flash animate__infinite"><b>$<%= hoteles.price %></b> por noche</span>
+                                        <span class="recomendado2 animate__animated animate__flash animate__slower animate__infinite"><b>$<%= hoteles.price %></b> por noche</span>
                                     </div>
-                                    <button class="comprar3">Añadir a carrito</button>
+                                    <button class="comprar3" data-id="<%= hoteles.id %>">Añadir</button>
                             </article>
                             <% }) %>
                     </div>

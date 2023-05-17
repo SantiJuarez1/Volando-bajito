@@ -10,11 +10,11 @@
                         <div class="logo-container">
                             <img src="/images/logo.png" alt="Logo Volando Bajito">
                         </div>
-                        <form action="/user/login" class="formulario" autocomplete="off" method="POST">
+                        <form action="/user/login" class="formulario" autocomplete="off" method="POST" id="login-formulario" autocomplete="off">
                             <h1 class="formulario__titulo">Ingresa a tu cuenta</h1>
 
                             <div class="form-box">
-                                <input type="text" name="email" class="formulario__input" placeholder=" ">
+                                <input type="email" name="email" class="formulario__input" placeholder=" " id="email" required autofocus>
                                 <label for="email" class="formulario__label">E-Mail</label>
                                 <span class="formulario__line"></span>
                                 <div class="register-error-message">
@@ -25,7 +25,7 @@
                             </div>
 
                             <div class="form-box">
-                                <input type="password" name="password" class="formulario__input" placeholder=" ">
+                                <input type="password" name="password" class="formulario__input" placeholder=" " id="password" required>
                                 <label for="password" class="formulario__label">Contraseña</label>
                                 <span class="formulario__line"></span>
                                 <div class="register-error-message">

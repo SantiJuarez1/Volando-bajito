@@ -41,7 +41,7 @@ const controller = {
                 email: req.body.email,
                 password: bcrypt.hashSync(req.body.password, 10),
                 avatar: req.file.filename ? req.file.filename : 'default-profile.webp',
-                role: 2
+                role: 1
             };
             await db.User.create(user);
             res.redirect('/user/login');
@@ -71,7 +71,7 @@ const controller = {
             }
 
             if(req.body.remember_me) {
-                res.cookie('recordame', req.body.email, { maxAge: (1000 * 60) * 2 })
+                res.cookie('recordame', req.body.email, { maxAge: (1000 * 60) * 5 })
             }
             //variable de session
             req.session.user = {
@@ -94,7 +94,7 @@ const controller = {
     logout: (req, res) => {
         res.clearCookie('userEmail'); //destruir cookie
         req.session.destroy();
-        return res.redirect('/')
+        return res.redirect('/user/login')
     }
 };
 

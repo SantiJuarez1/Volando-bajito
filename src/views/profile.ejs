@@ -1,22 +1,32 @@
 <%-include('partials/head') %>
-<link rel="stylesheet" href="/css/perfil.css">
 </head>
     <body>
         <%- include('partials/header') %>
             <main>
-                <h2>Bienvenido a tu perfil</h2>
-                <a href="/user/logout">
-                    <button>Salir</button>
-                </a>
+                <h2 class="detailProduct">Bienvenido a tu perfil</h2>
+                <h2 class="detailProduct"><%= user.fullname %></h2>
+                <div class="logout-container">
+                    
+                    <a href="/user/logout">
+                    <script class="logout" src="https://cdn.lordicon.com/bhenfmcm.js"></script>
+                            <lord-icon
+                                src="https://cdn.lordicon.com/huwchbks.json"
+                                trigger="hover"
+                                colors="primary:#ffffff,secondary:#0A1931"
+                                style="width:100px;height:100px">
+                            </lord-icon>
+                    </a>
+                </div>
+                
                 <form method="post" action='https://register-demo.freecodecamp.org'>
                     <fieldset class="encabezado">
-                        <img class="profilePic" src="\images\avatar1.jpg">
+                        <img class="profilePic" src="\images\<%= user.avatar %>">
                     </fieldset>
                     <fieldset class="infoUser">
                         <label for="email">Email: <input id="email" name="email" type="email"
-                                placeholder="email@example.com" required /></label>
+                                placeholder="email@example.com" value="<%= user.email %>"/></label>
                         <label for="telefono">Telefono: <input id="new-password" name="telefono" type="number"
-                                required /></label>
+                                /></label>
                         <label for="age">Fecha de nacimiento: <input id="age" type="date" name="age" min="18"
                                 max="120" /></label>
                         <label> Género:
@@ -34,7 +44,7 @@
                         <h3>Datos de Tarjeta:</h3>
                         <label for="cardNumber">Número
                             <input id="cardNumber" type="text" name="cardNumber" minlength="16" maxlength="16"
-                                placeholder="ingresá los 16 digitos de la tarjeta" required>
+                                placeholder="ingresá los 16 digitos de la tarjeta">
                         </label>
                         <label>Vencimiento
                             <input id="vencimiento" name="vencimiento" type="month">
@@ -43,7 +53,7 @@
                             <input id="cardName" name="cardName" type="text"
                                 placeholder="Nombre completo como figura en la tarjeta">
                         </label>
-                        <label for="documento">Tipo y número de documento del Titular:
+                        <label class="documento" for="documento">Tipo y número de documento del Titular:
                             <select id="tipoDocumento" name="tipoDocumento">
                                 <option value="">(seleccionar)</option>
                                 <option value="1">DNI</option>

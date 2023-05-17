@@ -9,11 +9,11 @@
             <div class="logo-container">
                 <img src="/images/logo.png" alt="Logo Volando Bajito">
             </div>
-            <form action="/user/register" class="formulario" autocomplete="off" method="post" enctype="multipart/form-data">
+            <form action="/user/register" class="formulario" id="login-formulario" method="post" enctype="multipart/form-data" autocomplete="off">
                 <h1 class="formulario__titulo">Crea tu cuenta</h1>
 
                 <div class="form-box">
-                    <input type="text" name="fullname" class="formulario__input" placeholder=" ">
+                    <input type="text" name="fullname" class="formulario__input" placeholder=" " id="fullname" required focus>
                     <label for="fullname" class="formulario__label">Nombre y Apellido</label>
                     <div class="register-error-message">
                         <% if (locals.errors?.fullname) { %>
@@ -25,7 +25,7 @@
                 </div>
 
                 <div class="form-box">
-                    <input type="text" name="username" class="formulario__input" placeholder=" ">
+                    <input type="text" name="username" class="formulario__input" placeholder=" " id="username" required focus>
                     <label for="username" class="formulario__label">Usuario</label>
                     <div class="register-error-message">
                         <% if (locals.errors?.username) { %>
@@ -37,7 +37,7 @@
                 </div>
 
                 <div class="form-box">
-                    <input type="text" name="email" class="formulario__input" placeholder=" ">
+                    <input type="email" name="email" class="formulario__input" placeholder=" " id="email" required autofocus>
                     <label for="email" class="formulario__label">E-Mail</label>
                     <div class="register-error-message">
                         <% if (locals.errors?.email) { %>
@@ -50,7 +50,7 @@
 
 
                 <div class="form-box">
-                    <input type="password" name="password" class="formulario__input" placeholder=" ">
+                    <input type="password" name="password" class="formulario__input" placeholder=" " id="password" required>
                     <label for="password" class="formulario__label">Contraseña</label>
                     <div class="register-error-message">
                         <% if (locals.errors?.password) { %>
@@ -62,7 +62,7 @@
                 </div>
                 <div class="form-box">
                     <label for="avatar" class="label">Avatar</label>
-                    <input type="file" name="avatar" class="formulario__input" placeholder=" ">
+                    <input type="file" name="avatar" class="formulario__input" placeholder=" " id="avatar" required>
                 </div>
                 <button class="btn-form" type="submit">ENVIAR</button>
                 <div class="preguntar">

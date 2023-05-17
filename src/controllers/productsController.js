@@ -5,8 +5,9 @@ const db = require('../database/models');
 const controller = {
     index: async (req, res) => {
         try {
-            const products = await db.Product.findAll({include: ['images', 'category'], where: {product_categories_id : 1}
-                
+            const products = await db.Product.findAll({
+                include: ['images', 'category'], 
+                where: {product_categories_id : 1}   
             });
             res.render('index',  { products }); 
         } catch (error) {
@@ -27,7 +28,7 @@ const controller = {
             res.render('detail',  { products });
         } catch (error) {
             res.send({ error });
-        }
+        }   
     },
     add: (req, res) => {
         res.render('product-create');

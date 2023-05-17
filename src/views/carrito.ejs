@@ -2,8 +2,55 @@
     </head>
     <body>
         <%- include('partials/header') %>
-        <!-- main -->
-        <p class="leyenda"><i class="fas fa-regular fas fa-cart-shopping"></i> Carrito <i
+        <main class="carrito">
+            <h2 class="detailProduct"> Productos en mi carrito</h2>
+                <div class="containerCarrito">
+                    <div class="carrito-body">
+                        <table class="table2">
+                            <thead>
+                                <tr>
+                                    <th style="width: 50px;">
+                                        <strong>#</strong>
+                                    </th>
+                                    <th class="th-lg">
+                                        <strong>Producto</strong>
+                                    </th>
+                                    <th class="th-lg ">
+                                        <strong>Precio</strong>
+                                    </th>
+                                    <th class="text-center">
+                                        <strong>Cantidad</strong>
+                                    </th>
+                                    <th class="text-center">
+                                        <strong>Subtotal</strong>
+                                    </th>
+                                    <th style="width: 50px;"></th>
+                                </tr>
+                            </thead>
+                            <tbody class="cartRows">
+                            </tbody>
+                        </table>
+                        <div class="card-footer text-right">
+                            <h2>Total: <span class="totalAmount">$ 0</span></h2>
+                        </div>
+                        <button class="boton3"
+                type="submit">Comprar</button>
+                    </div>
+                </div>
+                
+        </main>
+        <%- include('partials/footer') %>
+
+
+
+
+
+
+
+
+
+
+        <!-- <p class="leyenda"><i class="fas fa-regular fas fa-cart-shopping"></i> Carrito <i
                 class="fas fa-regular fas fa-cart-shopping"></i> </p>
         <hr>
         <main>
@@ -31,5 +78,5 @@
             <div class="buttons">
                 <input class="vaciar-carrito" type="reset" value="Vaciar Carrito">
                 <input class="comprar" type="button" id="boton-comprar" onclick="botoncomprar()" value="Comprar">
-            </div>
-            <%- include('partials/footer') %>
+            </div> -->
+            

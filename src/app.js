@@ -8,7 +8,8 @@ const cookies = require('cookie-parser');
 //modulos internos
 const products = require('./routes/products');
 const users = require('./routes/user'); 
-const main = require('./routes/main'); 
+const main = require('./routes/main');
+const api = require("./routes/api"); 
 
 const app = express();
 //configurar el Template Engine
@@ -41,6 +42,7 @@ app.use(authenticationMiddleware);
 app.use('/', products);
 app.use('/user', users);
 app.use('/products', main); 
+app.use("/api/", api);
 
 //puerto
 const port = process.env.PORT || 3500;

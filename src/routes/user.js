@@ -26,11 +26,12 @@ const upload = multer({
 const authMiddleware = require('../middlewares/authMiddleware'); //si esta logueado tiene acceso a...
 const registerValidator = require('../validators/registerValidator');
 const guestMiddleware = require('../middlewares/guestMiddleware')
+const mantenimientoMiddleware = require('../middlewares/mantenimientoMiddleware');
 
 //RUTAS PARA DB
 router.get('/register', guestMiddleware, userController.register);
 router.post('/register', upload.single('avatar'), registerValidator, userController.create); 
-router.get('/login', userController.login); 
+router.get('/login', mantenimientoMiddleware, userController.login); 
 router.post('/login', guestMiddleware, userController.loginProcess); 
 router.get('/', authMiddleware, userController.profile);
 router.get('/logout', userController.logout); 

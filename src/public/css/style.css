@@ -51,7 +51,6 @@ header ul li a {
     font-size: 20px;
     font-weight: 600;
     text-decoration: none;
-    cursor: pointer;
 }
 
 header ul li a:hover {
@@ -101,6 +100,17 @@ lord-icon {
     padding-left: -140px;
     cursor: pointer;
 }
+
+.badge {
+    position: absolute;
+    background-color: #0614AD;
+    border-radius: 50%;
+    margin-top: -100px;
+    margin-left: 50px;
+    padding: 5px 10px;
+    color: #fff;
+}
+
 /* Final HEADER */
 /* Comienzo FOOTER */
 footer {
@@ -1152,7 +1162,7 @@ textarea {
 }
 /* ###########  FINAL LOGIN ############## */
 /* ########### ADMIN ############## */
-.row {
+.admin {
     width: 100%;
     background-color: white;
     height: auto;
@@ -1198,7 +1208,7 @@ textarea {
     height: auto;
 }
 
-th {
+.table th {
     padding: 10px;
     border-bottom: 5px solid #0614AD;
 }
@@ -1207,7 +1217,7 @@ th {
     text-align: center;
 }
 
-td {
+.rellenoTable td {
     padding: 10px;
     border-bottom: 1px solid gray;
 }
@@ -1218,12 +1228,204 @@ td {
 
 .modificacion {
     text-align: left;
-}
+} 
 /* ########### FIN ADMIN ############## */
+/* ########### PERFIL ############## */
+.logout-container{
+    display: flex;
+    justify-content: end;
+    margin: 0px 80px;
+}
+
+fieldset {
+    max-width: 800px;
+    align-items: center;
+    background-color: aliceblue;
+    display: flex;
+    flex-direction: column;
+    margin: 40px auto;
+}
+/* sector de foto de perfil */
+.encabezado {
+    background: linear-gradient(180deg, #0614AD 0%, #20BAE6 100%);
+    border-style: hidden;
+    color: lightgray;
+    border-radius: 10px;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    max-width: 400px;
+    display: flex;
+}
 
 
 
+.profilePic {
+    border-radius: 50%;
+    max-height: 80px;
+    max-width: 80px;
+}
 
+.btn-form3 {
+    width: 50%;
+    margin: 20px 40px;
+    border: 1px solid #0614AD;
+    padding: 10px 20px;
+    background-color: #0614AD;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    cursor: pointer;
+}
+/* sector de datos del usuario */
+.infoUser {
+    border-style: hidden;
+    border-radius: 10px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 400px;
+}
+
+.infoUser label {
+    padding: 10px 0px;
+}
+/* sector de encabezado de pago */
+fieldset.infoPago {
+    background: linear-gradient(180deg, #0614AD 0%, #20BAE6 100%);
+    border-radius: 10px;
+    border-style: hidden;
+    padding-top: 15px;
+    padding-bottom: 10px;
+    margin: 40px auto;
+    color: lightgray;
+    max-width: 400px;
+}
+
+.infoPago h3, .infoPago p {
+    padding: 10px 20px;
+}
+/* sector de informacion de pago */
+fieldset.datosTarjeta {
+    border-style: hidden;
+    border-radius: 15px;
+    padding-top: 20px;
+    padding-bottom: 20px;
+    margin: 40px auto;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    max-width: 400px;
+}
+
+.datosTarjeta h3, .datosTarjeta label {
+    padding: 10px 20px;
+}
+
+.documento {
+    padding: 10px 20px;
+}
+/* botones enviar - cancelar */
+div.buttons{
+    display: flex;
+    inline-size: auto;
+    align-items: center;
+    margin: auto;
+    justify-content: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 20px;
+    box-sizing: border-box;
+}
+
+.submit{
+   background-color: #20BAE6;
+   color: #fff;
+   border-style: hidden;
+   border-radius: 5px;
+   padding: 10px 15px;
+   cursor: pointer;
+}
+
+.reset{
+     background-color: #20BAE6;
+     color: #fff;
+     border-style: hidden;
+     border-radius: 5px;
+     padding: 10px 15px;
+     cursor: pointer;
+}
+/* ########### FIN PERFIL ############## */
+/* ########### CARRITO ############## */
+.carrito {
+    width: 100%;
+    height: 800px;
+}
+.containerCarrito {
+    background-color: white;
+    width: 1000px;
+    margin: 40px auto;
+    display: flex;
+}
+
+.carrito-body {
+    background-color: white;
+    margin: 20px auto;
+}
+
+.table2 {
+    width: 800px;
+    padding: 10px;
+    justify-content: space-evenly;
+}
+
+th {
+    text-align: center;
+    padding: 10px 20px;
+    justify-content: space-evenly;
+}
+
+.cartRows {
+    padding: 10px 20px;
+}
+
+.totalAmount {
+    color: #333;
+    margin-left: 500px;
+}
+
+.text-center {
+    text-align: center;
+}
+
+.boton3 {
+    border: 1px solid #20BAE6;
+    padding: 10px 30px;
+    background-color: #20BAE6;
+    color: #ffffff;
+    text-decoration: none;
+    border-radius: 50px;
+    margin-top: 20px;
+    margin-left: 670px;
+}
+
+.p {
+    text-align: center;
+}
+
+.close {
+    text-align: center;
+    background-color: #0614AD;
+    border-radius: 50%;
+    padding: 5px 5px;
+    color: #fff;
+    cursor: pointer;
+}
+/* ########### FIN CARRITO ############## */
 
 /*REPONSIVE PARA +800 header*/
 @media screen and (min-width: 800px) {
@@ -1259,125 +1461,242 @@ td {
     }
 }
 
-/*Media query*/
+@media (max-width:805px) {
+    nav {
+        display: none;
+    }
 
-/* @media screen and (max-width: 800px) {
-    .waveDescription {
-        margin: 20px 150px;
+    .bar-btn {
+        font-size: 25px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .parte1,
+    .parte2 {
+        font-size: 40px;
+        color: #0614AD;
     }
 
     .feedbacks {
         display: none;
     }
-
+    
     .article1 {
-        width: 350px;
-        height: 350px;
-        padding: 20px 50px 20px 20px;
-        margin: 50px 20px 30px 20px;
+        width: 300px;
+        height: 300px;
     }
-
-    .article2 {
-        width: 350px;
-        height: 350px;
-        margin: 10px 330px;
-    }
-
-    .footer-p {
-        width: 200px;
-        padding-top: 10px;
-    }
-
-    .footerP {
-        font-size: 12px;
-        text-align: left;
-    }
-
-    .menu {
-        width: 500px;
-        padding-top: 10px;
-    }
-
-    .boton {
-        margin-left: 10px;
-        font-size: 12px;
-    }
-}
-
-@media screen and (max-width: 480px) {
-    .container-img {
-        height: 400px;
-    }
-
-    .titulo {
-        padding: 10px 10px;
-    }
-
-    .parte1 {
-        color: #0614AD;
-    }
-
-    .parte2 {
-        color: black;
-        padding-bottom: 5px;
-        border-bottom: none;
-    }
-
-    .parte1,
-    .parte2 {
-        font-size: 50px;
-    }
-
-    .sub-titulo {
-        display: none;
-    }
-
-    .botones2 {
-        padding: 180px 10px;
-    }
-
-    .wave {
-        display: none;
-    }
-
-    .recomendacion-article {
-        display: inline-block;
-    }
-
-    .article1 {
-        display: none;
-    }
-
+    
     .articleT {
-        font-size: 24px;
+        padding: 30px;
     }
-
+    
     .articleP {
         display: none;
     }
-
+    
     .article2 {
-        position: relative;
-        width: 250px;
+        width: 300px;
         height: 200px;
-        margin: 10px 40px;
+        margin: 0px 120px;
+    } 
+}
+ 
+@media (max-width:600px) {
+    .description-feed {
+        padding: 55px 20px 20px 20px;
+        font-size: 25px;
     }
 
-    .footer-p {
-        width: 100%;
-        padding-top: 10px;
+    .feedT {
+        font-size: 1.5rem;
+        line-height: 1.45;
+        color: #333;
     }
 
-    .footerP {
+    .titulo {
+        padding: 50px 20px;
+    }
+
+    .article1 {
+        animation: rotacion 20s infinite ease-in;
+        background-size: cover;
+        max-width: 1400px;
+        height: 300px;
+    }
+
+    .bar-btn {
+        font-size: 20px;
+        color: white;
+        cursor: pointer;
+    }
+
+    .logo {
+        width: 100px;
+        cursor: pointer;
+        transition: all 0.3;
+    }
+
+    .article1 {
+        animation: rotacion 20s infinite ease-in;
+        background-size: cover;
+        max-width: 1400px;
+        height: 300px;
+    }
+
+    fieldset.encabezado {
+        background: linear-gradient(180deg, #0614AD 0%, #20BAE6 100%);
+        border-style: hidden;
+        color: lightgray;
+        border-radius: 15px;
+        padding-top: 20px;
+        padding-bottom: 20px;
+        margin: 40px 0px 15px;
+        width: 400px;
+    }
+    fieldset.infoPago {
+        background: linear-gradient(180deg, #0614AD 0%, #20BAE6 100%);
+        border-radius: 15px;
+        border-style: hidden;
+        padding-top: 15px;
+        padding-bottom: 10px;
+        margin: 20px 0px 10px;
+        color: lightgray;
+        width: 400px;
+    }
+
+}
+
+@media (max-width:367px) {
+    element.style {
+        width: 40px;
+        height: 80px;
+    }
+
+    .login {
+        border: 1px solid #0614AD;
+        padding: 10px 10px;
+        background-color: #0614AD;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 50px;
         font-size: 12px;
+        max-height: 37px;
+        min-width: 70px;
+    }
+
+    .bar-btn {
+        font-size: 18px;
+    }
+
+    .titulo {
+        padding: 65px 20px;
+    }
+
+    .botones2 {
+        padding: 80px 1px;
+    }
+
+    .boton1 {
+        border: 1px solid #0614AD;
+        padding: 6px 28px;
+        background-color: #0614AD;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 50px;
+    }
+
+    .boton2 {
+        border: 1px solid #333;
+        padding: 6px 16px;
+        background-color: #333;
+        color: #ffffff;
+        text-decoration: none;
+        border-radius: 50px;
+    }
+
+    .sub-text {
+        color: #7B7E86;
+        font-size: 16px;
+        padding: 25px;
+    }
+
+    .subTcard {
+        color: #7B7E86;
+        display: block;
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: -0.025em;
+        height: 150px;
+        width: 250px;
+    }
+
+    .destinos {
+        width: 90%;
+        margin: 0 auto;
+        padding: 30px 0px;
         text-align: center;
     }
 
-    .menu {
-        display: none;
+    h2 {
+        color: white;
+        padding-top: 10px;
+        font-size: 18px;
     }
 
-    .boton {
-        display: none;
+    .card {
+        display: inline-block;
+        margin: 8px 0px;
+        max-width: 250px;
+        perspective: 1000;
+        text-align: left;
+        transition: all 0.3s 0s ease-in;
+        width: 250px;
+        padding-bottom: 20px;
     }
-} */ 
+
+    .articleP {
+        color: white;
+        text-align: left;
+        padding: 20px 25px;
+        font-size: 10px;
+    }
+
+    .article2 {
+        background-color: #0614AD;
+        max-width: 1400px;
+        min-height: 320px;
+    }
+
+    .article1 {
+        animation: rotacion 20s infinite ease-in;
+        background-size: cover;
+        max-width: 1400px;
+        height: 180px;
+    }
+
+    footer {
+        background-color: black;
+        display: flex;
+        padding: 20px 20px;
+        justify-content: center;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
+    }
+}
+
+@media (min-width:426px) {
+    .item {
+        margin-left: 30%;
+        margin-right: 30%;
+    }
+
+    .item img {
+        width: 125px;
+    }
+
+    .textos {
+        font-size: 18px;
+    }
+}
